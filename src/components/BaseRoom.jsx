@@ -7,7 +7,7 @@ import * as THREE from 'three';
 import { useGLTF, useTexture} from "@react-three/drei";
 
 export function BaseRoom(props) {
-  const { nodes, materials } = useGLTF("./models/BaseRoom.gltf");
+  const { nodes, materials } = useGLTF("public/models/BaseRoom.gltf");
   
   //BaseTexture
   const baseTexture = useTexture("public/texture/BaseRoom.png")
@@ -38,9 +38,6 @@ export function BaseRoom(props) {
     materials.Desktop.map = desktopTexture
     materials.SegundoPiso.map = secondFloorTexture
     materials.Pecera.map = terrariumTexture 
-
-
-
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -48,543 +45,364 @@ export function BaseRoom(props) {
         receiveShadow
         geometry={nodes.alacena.geometry}
         material={materials.CuartoBase}
-        position={[-1.229, 0.953, 0.291]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.cojin1.geometry}
         material={materials.CuartoBase}
-        position={[-1.265, 0.316, 0.122]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.cojin2.geometry}
         material={materials.CuartoBase}
-        position={[-1.281, 0.316, 0.232]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.cojin3.geometry}
         material={materials.CuartoBase}
-        position={[-1.268, 0.316, 0.336]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.escaleras_puerta.geometry}
         material={materials.CuartoBase}
-        position={[-1.214, 0.241, 1.068]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Manijas.geometry}
         material={materials.CuartoBase}
-        position={[-1.179, 0.963, 0.331]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Marco_Puerta.geometry}
         material={materials.CuartoBase}
-        position={[-1.322, 0.715, 1.044]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Marco_Ventana.geometry}
         material={materials.CuartoBase}
-        position={[0.226, 1.781, -1.296]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Pared_D.geometry}
         material={materials.CuartoBase}
-        position={[0.552, 2.111, -1.353]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Pared_izq.geometry}
         material={materials.CuartoBase}
-        position={[-1.406, 1.606, 0.624]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Piso.geometry}
         material={materials.CuartoBase}
-        position={[1.013, 0.11, -0.116]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Puerta.geometry}
         material={materials.CuartoBase}
-        position={[-1.338, 0.659, 1.087]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.sillon.geometry}
         material={materials.CuartoBase}
-        position={[-1.168, 0.273, 0.219]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.almohada.geometry}
         material={materials.SegundoPiso}
-        position={[0.032, 0.476, -1.2]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.almohada1.geometry}
         material={materials.SegundoPiso}
-        position={[-0.079, 0.457, -1.217]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.colchon.geometry}
         material={materials.SegundoPiso}
-        position={[-0.018, 0.41, -0.957]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.cuarto.geometry}
         material={materials.SegundoPiso}
-        position={[-0.095, 0.511, -0.85]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.escaleras_cuarto.geometry}
         material={materials.SegundoPiso}
-        position={[0.398, 0.242, -1.007]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.escaleras_pared.geometry}
         material={materials.SegundoPiso}
-        position={[1.062, 0.695, -0.571]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.librero.geometry}
         material={materials.SegundoPiso}
-        position={[0.664, 0.64, -0.948]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.pared.geometry}
         material={materials.SegundoPiso}
-        position={[0.473, 0.705, -0.834]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.SegundoPiso.geometry}
         material={materials.SegundoPiso}
-        position={[0.265, 1.065, -0.225]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.TerrarioGrande.geometry}
         material={materials.SegundoPiso}
-        position={[-0.839, 0.574, -0.76]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Tierra_A001.geometry}
         material={materials.SegundoPiso}
-        position={[-1.012, 0.221, -0.962]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Tubo.geometry}
         material={materials.SegundoPiso}
-        position={[0.021, 1.311, 0.018]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Tubo_Abajo.geometry}
         material={materials.SegundoPiso}
-        position={[-0.525, 1.216, 0.404]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.escritorio.geometry}
         material={materials.Desktop}
-        position={[-0.944, 1.56, -0.666]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.lata.geometry}
         material={materials.Desktop}
-        position={[-1.216, 1.514, 0.223]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.lata1.geometry}
         material={materials.Desktop}
-        position={[-1.216, 1.514, 0.267]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.lata2.geometry}
         material={materials.Desktop}
-        position={[-1.216, 1.514, 0.18]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.lata3.geometry}
         material={materials.Desktop}
-        position={[-1.216, 1.514, 0.136]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.lata4.geometry}
         material={materials.Desktop}
-        position={[-1.216, 1.544, 0.156]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.lata5.geometry}
         material={materials.Desktop}
-        position={[-1.199, 1.398, 0.285]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.lata6.geometry}
         material={materials.Desktop}
-        position={[-1.199, 1.398, 0.241]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.lata7.geometry}
         material={materials.Desktop}
-        position={[-1.21, 1.445, 0.189]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.lata8.geometry}
         material={materials.Desktop}
-        position={[-1.261, 1.445, 0.168]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.lata9.geometry}
         material={materials.Desktop}
-        position={[-1.218, 1.445, 0.126]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Marco_Monitores001.geometry}
         material={materials.Desktop}
-        position={[-1.281, 2, -0.836]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Mouse001.geometry}
         material={materials.Desktop}
-        position={[-1.207, 1.668, -0.932]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.PC1001.geometry}
         material={materials.Desktop}
-        position={[-1.191, 1.448, -0.712]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.PC2001.geometry}
         material={materials.Desktop}
-        position={[-1.079, 1.448, -1.105]}
-        rotation={[Math.PI / 2, 0, -0.655]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.polySurface133.geometry}
         material={materials.Desktop}
-        position={[-1.05, 1.578, -0.273]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.polySurface136.geometry}
         material={materials.Desktop}
-        position={[-1.05, 1.392, -0.273]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Ps4001.geometry}
         material={materials.Desktop}
-        position={[-1.24, 1.677, -0.506]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Refri_Marco.geometry}
         material={materials.Desktop}
-        position={[-1.219, 1.471, 0.201]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Repisa_Grande002.geometry}
         material={materials.Desktop}
-        position={[-1.2, 1.556, 0.858]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Repisa_Grande1.geometry}
         material={materials.Desktop}
-        position={[-1.268, 1.944, 0.582]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Repisa_Grande2.geometry}
         material={materials.Desktop}
-        position={[-1.259, 2.048, 0.046]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Silla002.geometry}
         material={materials.Desktop}
-        position={[-0.84, 1.525, -0.757]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Teclado001.geometry}
         material={materials.Desktop}
-        position={[-1.201, 1.681, -0.789]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Xbox360001.geometry}
         material={materials.Desktop}
-        position={[-1.231, 1.723, -0.38]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.pecera1.geometry}
         material={materials.Pecera}
-        position={[-1.219, 1.753, 0.193]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Tapas_G.geometry}
         material={materials.Pecera}
-        position={[-1.212, 1.717, 0.868]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Tierra_G001.geometry}
         material={materials.Pecera}
-        position={[-1.227, 1.608, 0.873]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={[0.011, 0.013, 0.01]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Tierra_P001.geometry}
         material={materials.Pecera}
-        position={[-1.213, 1.659, 0.192]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.013}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.trunks00001.geometry}
         material={materials.Pecera}
-        position={[-1.224, 1.646, 0.868]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.trunks01002.geometry}
         material={materials.Pecera}
-        position={[-1.229, 1.692, 0.203]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.trunks01003.geometry}
         material={materials.Pecera}
-        position={[-1.102, 0.454, -1.105]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.trunks03002.geometry}
         material={materials.Pecera}
-        position={[-1.211, 1.722, 0.178]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.trunks03003.geometry}
         material={materials.Pecera}
-        position={[-1.262, 1.685, 0.833]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
       />
     </group>
   );
 }
 
-useGLTF.preload("./models/BaseRoom.gltf");
+useGLTF.preload("public/models/BaseRoom.gltf");
+
