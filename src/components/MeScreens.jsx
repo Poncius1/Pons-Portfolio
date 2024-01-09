@@ -12,38 +12,26 @@ export function MeScreens(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Pantalla_Centro1.geometry}
-        material={materials.t}
-        position={[-1.32, 1.99, -0.45]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
+        geometry={nodes.Pantalla_Centro.geometry}
+        material={nodes.Pantalla_Centro.material}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Pantalla_Centro2.geometry}
-        material={materials.t}
-        position={[-1.29, 2.24, -0.57]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
+        geometry={nodes.Pantalla_Izquierda.geometry}
+        material={nodes.Pantalla_Izquierda.material}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Pantalla_Centro3.geometry}
-        material={materials.t}
-        position={[-1.31, 2.05, -0.79]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
+        geometry={nodes.Pantalla_Derecha.geometry}
+        material={nodes.Pantalla_Derecha.material}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Pantalla_Centro5.geometry}
-        material={materials.t}
-        position={[-1.21, 1.91, -1.14]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
+        geometry={nodes.Pantalla_Vertical.geometry}
+        material={nodes.Pantalla_Vertical.material}
       />
     </group>
   );

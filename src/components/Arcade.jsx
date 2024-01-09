@@ -18,8 +18,8 @@ export function Arcade(props) {
         material={materials.Screen}
         >
             <Html transform
-            rotation={[0,0,0]}
-            position={[24.4, -7.5, -1]}
+            rotation={[0,0.2,0]}
+            position={[79.5,90.5,-58]} 
              style={{
                 backgroundColor: 'red',
                 width: '100px',

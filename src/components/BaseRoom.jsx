@@ -399,10 +399,10 @@ export function BaseRoom(props) {
         receiveShadow
         geometry={nodes.trunks03003.geometry}
         material={materials.Pecera}
-      />
+      /> 
     </group>
   );
 }
-
+ 
 useGLTF.preload("public/models/BaseRoom.gltf");
 

@@ -72,14 +72,14 @@
             "componentType" : 5126,
             "count" : 4,
             "max" : [
-                1.2631932497024536,
-                1.8872159719467163,
-                -0.9246785640716553
+                69.83758544921875,
+                105.3136978149414,
+                -51.338199615478516
             ],
             "min" : [
-                1.0114492177963257,
-                1.6870441436767578,
-                -1.0320191383361816
+                55.79273223876953,
+                94.14606475830078,
+                -57.32675552368164
             ],
             "type" : "VEC3"
         },
@@ -109,7 +109,7 @@
     "buffers" : [
         {
             "byteLength" : 208,
-            "uri" : "data:application/octet-stream;base64,RFJBQ08CAgEBAAAABAICAgAAAR//ARH/ARH/ARED/wABAAAAAQAAAQAJAwAAAgEDCQIAAQIBAQkDAAIDAQEBAA8jARAPATADACiCHgYAQGmHIDnapE0gAACGKwAAagEAAAAA/z8AACt3gT8Q8dc/NBmEv5jkgD4OBQEBAAwPARABEAcBEAcBEAMAHEiHAIhIPK0PAgAAAAEBIAAAAAD/DwAAaCDxPvB2XT+0VCk+DAYDAQALJwFAAQD+C+C/AP4L4L8A/wMAAP8BAAD/AkRACg=="
+            "uri" : "data:application/octet-stream;base64,RFJBQ08CAgEBAAAABAICAgAAAR//ARH/ARH/ARED/wABAAAAAQAAAQAJAwAAAgEDCQIAAQIBAQkDAAIDAQEBAA8jARAPATADACiCHgYAQGmHIDnapE0gAACGKwAAagEAAAAA/z8AAMIrX0LJSrxCmU5lwri3YEEOBQEBAAwPARABEAcBEAcBEAMAHEiHAIhIPK0PAgAAAAEBIAAAAAD/DwAAaCDxPvB2XT+0VCk+DAYDAQALJwFAAQD+C+C/AP4L4L8A/wMAAP8BAAD/AkRACg=="
         }
     ]
 }

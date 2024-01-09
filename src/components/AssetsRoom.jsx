@@ -653,5 +653,4 @@ export function AssetsRoom(props) {
   );
 }
 
-
 useGLTF.preload("public/models/AssetsRoom.gltf");
