@@ -16,23 +16,27 @@ export function Arcade(props) {
         receiveShadow
         geometry={nodes.Arcade_Screen.geometry}
         material={materials.Screen}
-        >
-            <Html transform
-            rotation={[0,0.2,0]}
-            position={[79.5,90.5,-58]} 
-             style={{
-                backgroundColor: 'red',
-                width: '100px',
-                height:'100px',
-                }} >
+          >
+            <Html 
+            transform
+            occlude
+            rotation={[-0.1,0,0]}
+            position={[79.2,94,-55]}
+            className="arcade-screen" >
                 <h1>
                     Hola Mundo
                 </h1>
             </Html>
-        </mesh>
-    
+          </mesh>
+      
     </group>
   );
 }
+ 
 
 useGLTF.preload("public/models/S_Arcade.gltf");
+
+
+
+
+

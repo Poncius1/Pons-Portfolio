@@ -7,3 +7,9 @@
 .canvas-container {
   background: #080808; /* Canvas Color */
 }
+
+.arcade-screen {
+  background-color: red;
+  width: 595px;
+  height: 465px;
+}
