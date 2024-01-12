@@ -7,7 +7,7 @@ import * as THREE from 'three';
 import { useGLTF, useTexture} from "@react-three/drei";
 
 export function BaseRoom(props) {
-  const { nodes, materials } = useGLTF("./src/models/BaseRoom.gltf");
+  const { nodes, materials } = useGLTF("/models/BaseRoom.gltf");
   
   //BaseTexture
   const baseTexture = useTexture("public/texture/BaseRoom.png")
@@ -404,5 +404,5 @@ export function BaseRoom(props) {
   );
 }
  
-useGLTF.preload("./src/models/BaseRoom.gltf");
+useGLTF.preload("/models/BaseRoom.gltf");
 

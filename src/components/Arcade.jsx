@@ -8,7 +8,7 @@ import { useGLTF,Html } from "@react-three/drei";
 
 
 export function Arcade(props) {
-  const { nodes, materials } = useGLTF("./src/models/S_Arcade.gltf");
+  const { nodes, materials } = useGLTF("./public/models/S_Arcade.gltf");
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -34,7 +34,7 @@ export function Arcade(props) {
 }
  
 
-useGLTF.preload("./src/models/S_Arcade.gltf");
+useGLTF.preload("./public/models/S_Arcade.gltf");
 
 
 
