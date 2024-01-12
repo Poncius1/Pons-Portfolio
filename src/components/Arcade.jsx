@@ -14,15 +14,16 @@ export function Arcade(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Arcade_Screen.geometry}
-        material={materials.Screen}
+        //geometry={nodes.Arcade_Screen.geometry}
+        //material={materials.Screen}
           >
-            <Html 
+            <Html
+            className="arcade-screen"
+            rotation={[-0.1,0,0]}
+            position={[63,99.6,-56]}
             transform
             occlude
-            rotation={[-0.1,0,0]}
-            position={[79.2,94,-55]}
-            className="arcade-screen" >
+             >
                 <h1>
                     Hola Mundo
                 </h1>

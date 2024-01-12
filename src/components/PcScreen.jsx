@@ -12,14 +12,16 @@ export function PcScreen(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.PcScreen.geometry}
-        material={materials["Screen.001"]}
+        //geometry={nodes.PcScreen.geometry}
+        //material={materials["Screen.001"]}
       >  
       <Html 
-      transform
-      position={[-74.5,97.5,-60]}
-      rotation={[0.,1.6,0]}
-      className="arcade-screen" >
+       className="pc-screen"
+        position={[-74.5,103.5,-43.8]}
+        rotation={[0.,1.57,0]}
+        transform
+        occlude
+      >
           <h1>
               Hola Mundo
           </h1>
