@@ -11,32 +11,32 @@ export function AssetsRoom(props) {
   
   
   //PropsTexture
-  const propsTexture = useTexture("public/texture/Props.png")
+  const propsTexture = useTexture("/texture/Props.png")
   propsTexture.flipY = false;
   propsTexture.encoding = THREE.sRGBEncoding
 
   //PudTexture
-  const pudTexture = useTexture("public/texture/Pud.png")
+  const pudTexture = useTexture("/texture/Pud.png")
   pudTexture.flipY = false;
   pudTexture.encoding = THREE.sRGBEncoding
 
    //PudTexture
-   const arcadeTexture = useTexture("public/texture/Arcade.png")
+   const arcadeTexture = useTexture("/texture/Arcade.png")
    arcadeTexture.flipY = false;
    arcadeTexture.encoding = THREE.sRGBEncoding
    
    //PostersTexture
-   const postersTexture = useTexture("public/texture/Posters.png")
+   const postersTexture = useTexture("/texture/Posters.png")
    postersTexture.flipY = false;
    postersTexture.encoding = THREE.sRGBEncoding
 
    //PlantsTexture
-   const plantsTexture = useTexture("public/texture/Plants.png")
+   const plantsTexture = useTexture("/texture/Plants.png")
    plantsTexture.flipY = false;
    plantsTexture.encoding = THREE.sRGBEncoding
 
    //BuzzTexture
-   const buzzTexture = useTexture("public/texture/Buzz.png")
+   const buzzTexture = useTexture("/texture/Buzz.png")
    buzzTexture.flipY = false;
    buzzTexture.encoding = THREE.sRGBEncoding
 

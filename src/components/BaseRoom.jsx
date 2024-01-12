@@ -10,25 +10,25 @@ export function BaseRoom(props) {
   const { nodes, materials } = useGLTF("/models/BaseRoom.gltf");
   
   //BaseTexture
-  const baseTexture = useTexture("public/texture/BaseRoom.png")
+  const baseTexture = useTexture("/texture/BaseRoom.png")
   baseTexture.flipY = false;
   baseTexture.encoding = THREE.sRGBEncoding
 
 
   //SecondFloor Texture
-  const secondFloorTexture = useTexture("public/texture/SegundoPiso.png")
+  const secondFloorTexture = useTexture("/texture/SegundoPiso.png")
   secondFloorTexture.flipY = false;
   secondFloorTexture.encoding = THREE.sRGBEncoding
   
 
   //Desktop Texture 
-  const desktopTexture = useTexture("public/texture/Desktop.png")
+  const desktopTexture = useTexture("/texture/Desktop.png")
   desktopTexture.flipY = false;
   desktopTexture.encoding = THREE.sRGBEncoding
 
 
   //Terrarium Texture
-  const terrariumTexture = useTexture("public/texture/Peceras.png")
+  const terrariumTexture = useTexture("/texture/Peceras.png")
   terrariumTexture.flipY = false;
   terrariumTexture.encoding = THREE.sRGBEncoding  
 
