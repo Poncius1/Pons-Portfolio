@@ -7,7 +7,7 @@ import * as THREE from 'three';
 import { useGLTF, useTexture} from "@react-three/drei";
 
 export function AssetsRoom(props) {
-  const { nodes, materials } = useGLTF("./public/models/AssetsRoom.gltf");
+  const { nodes, materials } = useGLTF("./src/models/AssetsRoom.gltf");
   
   
   //PropsTexture
@@ -653,4 +653,4 @@ export function AssetsRoom(props) {
   );
 }
 
-useGLTF.preload("./public/models/AssetsRoom.gltf");
+useGLTF.preload("./src/models/AssetsRoom.gltf");

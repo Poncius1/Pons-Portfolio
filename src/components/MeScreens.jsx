@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function MeScreens(props) {
-  const { nodes, materials } = useGLTF("public/models/Me_Screens.gltf");
+  const { nodes, materials } = useGLTF("./src/models/Me_Screens.gltf");
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -37,4 +37,4 @@ export function MeScreens(props) {
   );
 }
 
-useGLTF.preload("public/models/Me_Screens.gltf");
+useGLTF.preload("./src/models/Me_Screens.gltf");
