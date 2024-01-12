@@ -8,6 +8,7 @@ import { AssetsRoom } from "./components/AssetsRoom"
 import './style.css'
 import { MeScreens } from './components/MeScreens';
 import { Arcade } from './components/Arcade';
+import { PcScreen } from './components/PcScreen';
 
 const Experience = () => {
 
@@ -27,6 +28,7 @@ const Experience = () => {
       <AssetsRoom/>
       <MeScreens/>
       <Arcade/>
+      <PcScreen/>
       <axesHelper args={[5]} />
 
       <OrbitControls
