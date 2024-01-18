@@ -1,5 +1,6 @@
 import * as THREE from 'three';
-import { Canvas } from "@react-three/fiber"
+import { Suspense} from 'react';
+import { Canvas, } from "@react-three/fiber"
 import { Stats,OrbitControls } from "@react-three/drei"
 import Camera from "./components/Camera"
 import { BaseRoom } from "./components/BaseRoom"
@@ -21,6 +22,7 @@ const Experience = () => {
         toneMappingExposure: 1.0,
       }}
     >
+      <Suspense>
 
       <Camera/>
       <Light/>
@@ -36,8 +38,12 @@ const Experience = () => {
          maxAzimuthAngle={Math.PI / 2}
          minPolarAngle={Math.PI / 10}
          maxPolarAngle={Math.PI - Math.PI / 2}
+         panSpeed={0.5}
+         
+         
       />
 
+      </Suspense>
 
     </Canvas>
   )
