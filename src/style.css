@@ -40,12 +40,13 @@ main,
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 10px; 
   cursor: pointer;
 }
 
 .button img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
+  width: 50px; /* Ancho de las imágenes (ajusta según tus necesidades) */
+  height: auto; /* Altura ajustable para mantener la proporción */
+  opacity: 0.4
 }
 
