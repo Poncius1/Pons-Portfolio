@@ -25,3 +25,27 @@ main,
   height: 440px;
   overflow-y: auto;
 }
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
