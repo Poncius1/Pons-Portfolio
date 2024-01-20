@@ -97,7 +97,7 @@ export function AssetsRoom(props) {
         receiveShadow
         geometry={nodes.Plane002.geometry}
         material={materials.Poster}
-      />
+      /> 
       <mesh
         castShadow
         receiveShadow

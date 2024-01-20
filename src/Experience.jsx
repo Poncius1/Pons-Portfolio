@@ -22,7 +22,7 @@ const Experience = () => {
         toneMappingExposure: 1.0,
       }}
     >
-      <Suspense>
+      <Suspense fallback={null}>
 
       <Camera/>
       <Light/>
