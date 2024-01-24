@@ -57,18 +57,25 @@ export function InteractableMesh(props) {
     }
 
   const PUD = () =>{
+    controls.enabled = false
+        timeline.to(camera.rotation,{
+            x: Math.PI *  -0.08576,
+            y: Math.PI *  0.33,
+            z: Math.PI * 0.075,
+
+        })
         timeline.to(camera.position,{
-            x: 74,
-            y: 64,
-            z: 83,
+            x: 100,
+            y: 55,
+            z: 53,
         });
     }
 
     const Pecera = () =>{
         timeline.to(camera.position,{
-            x: 74,
-            y: 64,
-            z: 83,
+            x: -46,
+            y: 96,
+            z: 47,
         });
     }
 
@@ -82,7 +89,7 @@ export function InteractableMesh(props) {
         material={materials.Arcade}
       />
       
-      <mesh
+      <mesh onClick={Pecera}
         castShadow
         receiveShadow
         geometry={nodes.Cristal_Pecera_G.geometry}
