@@ -6,10 +6,11 @@ import React, { useRef } from "react";
 import * as THREE from 'three';
 import { useGLTF, useTexture} from "@react-three/drei";
 
+
 export function AssetsRoom(props) {
   const { nodes, materials } = useGLTF("/models/AssetsRoom.gltf");
   
-  
+
   //PropsTexture
   const propsTexture = useTexture("/texture/Props.png")
   propsTexture.flipY = false;
@@ -317,12 +318,6 @@ export function AssetsRoom(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Arcade.geometry}
-        material={materials.Arcade}
-      />
-      <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.Base.geometry}
         material={materials.PUD}
       />
@@ -542,18 +537,7 @@ export function AssetsRoom(props) {
         geometry={nodes.Cristal_Pecera_CH.geometry}
         material={glassMaterial}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cristal_Pecera_G.geometry}
-        material={glassMaterial}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cristal_Pud.geometry}
-        material={glassMaterial}
-      />
+      
       <mesh
         castShadow
         receiveShadow

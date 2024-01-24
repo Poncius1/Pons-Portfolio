@@ -5,9 +5,11 @@ const Camera = () => {
   return (
     <PerspectiveCamera
     makeDefault  
-    position={[200,250,200]}
+    position={[163,150,157]}
     fov={60}/>
+    
   )
+
 }
 
 export default Camera

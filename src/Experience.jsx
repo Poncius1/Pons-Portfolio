@@ -10,6 +10,8 @@ import './style.css'
 import { MeScreens } from './components/MeScreens';
 import { Arcade } from './components/Arcade';
 import { PcScreen } from './components/PcScreen';
+import { InteractableMesh } from './components/InteractableMesh';
+
 
 const Experience = () => {
 
@@ -23,24 +25,26 @@ const Experience = () => {
       }}
     >
       <Suspense fallback={null}>
-
+      
       <Camera/>
       <Light/>
       <BaseRoom/>
       <AssetsRoom/>
-      <MeScreens/>
+      <InteractableMesh/>
       <Arcade/>
+      <MeScreens/>
       <PcScreen/>
-      <axesHelper args={[5]} />
 
       <OrbitControls
-         minAzimuthAngle={-Math.PI / 13}
+         makeDefault
+         minAzimuthAngle={0}
          maxAzimuthAngle={Math.PI / 2}
          minPolarAngle={Math.PI / 10}
          maxPolarAngle={Math.PI - Math.PI / 2}
-         panSpeed={0.5}
-         
-         
+         enableZoom={true}
+         enablePan={true}
+         zoomSpeed={0.3}
+        
       />
 
       </Suspense>
