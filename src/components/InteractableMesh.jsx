@@ -35,17 +35,42 @@ export function InteractableMesh(props) {
 
 
   const {camera} = useThree();
-  console.log(camera.rotation);
+  const controls = useThree((state) => state.controls)
   const timeline = gsap.timeline();
-
+   console.log(camera.position)
+   console.log(camera.rotation)    
+   
   const Arcade = () =>{
-    timeline.to(camera.position,{
-        x:60,
-        y: 110,
-        z: -20
-    });
-    
-  }
+        controls.enabled = false
+        timeline.to(camera.rotation,{
+            x: Math.PI *  -0.043961,
+            y: 0,
+            z: 0
+
+        })
+        timeline.to(camera.position,{
+            x: 64,
+            y: 100,
+            z: -37,
+        });
+        
+    }
+
+  const PUD = () =>{
+        timeline.to(camera.position,{
+            x: 74,
+            y: 64,
+            z: 83,
+        });
+    }
+
+    const Pecera = () =>{
+        timeline.to(camera.position,{
+            x: 74,
+            y: 64,
+            z: 83,
+        });
+    }
 
   return (
     <group {...props} dispose={null}>
@@ -63,7 +88,7 @@ export function InteractableMesh(props) {
         geometry={nodes.Cristal_Pecera_G.geometry}
         material={glassMaterial}
       />
-      <mesh
+      <mesh onClick={PUD}
         castShadow
         receiveShadow
         geometry={nodes.Cristal_Pud.geometry}

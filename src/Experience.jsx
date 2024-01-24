@@ -14,7 +14,7 @@ import { InteractableMesh } from './components/InteractableMesh';
 
 
 const Experience = () => {
-
+  
   return (
     <Canvas className='canvas-container'
     
@@ -37,6 +37,7 @@ const Experience = () => {
 
       <OrbitControls
          makeDefault
+         enabled = {true}
          minAzimuthAngle={0}
          maxAzimuthAngle={Math.PI / 2}
          minPolarAngle={Math.PI / 10}
