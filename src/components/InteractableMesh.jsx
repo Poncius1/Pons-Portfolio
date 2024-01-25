@@ -37,9 +37,9 @@ export function InteractableMesh(props) {
   const {camera} = useThree();
   const controls = useThree((state) => state.controls)
   const timeline = gsap.timeline();
-   console.log(camera.position)
+   console.log(camera.position) 
    console.log(camera.rotation)    
-   
+   //controls.enabled = true
   const Arcade = () =>{
         controls.enabled = false
         timeline.to(camera.rotation,{
@@ -59,15 +59,15 @@ export function InteractableMesh(props) {
   const PUD = () =>{
     controls.enabled = false
         timeline.to(camera.rotation,{
-            x: Math.PI *  -0.08576,
-            y: Math.PI *  0.33,
-            z: Math.PI * 0.075,
+            x: Math.PI *  -0.0393,
+            y: 0,
+            z: 0,
 
         })
         timeline.to(camera.position,{
-            x: 100,
-            y: 55,
-            z: 53,
+            x: 5.40,
+            y: 73.43,
+            z: 173.09,
         });
     }
 
