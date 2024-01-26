@@ -13,7 +13,6 @@ import { PcScreen } from './components/PcScreen';
 import { InteractableMesh } from './components/InteractableMesh';
 import LoadingScreen from './components/LoadingScreen';
 
-
 const Experience = () => {
   
   return (
@@ -35,7 +34,6 @@ const Experience = () => {
       <Arcade/>
       <MeScreens/>
       <PcScreen/>
-
       <OrbitControls
          makeDefault
          enabled = {true}

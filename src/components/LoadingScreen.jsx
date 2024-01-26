@@ -1,8 +1,9 @@
 
 import React from 'react';
-import { Html } from '@react-three/drei';
-
+import { Html, useProgress } from '@react-three/drei';
 const LoadingScreen = () => {
+  const { progress } = useProgress();
+  
   return (
     <Html center>
       <div className="spinner-loader"></div>
