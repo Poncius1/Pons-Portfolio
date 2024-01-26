@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { Suspense} from 'react';
 import { Canvas, } from "@react-three/fiber"
-import { Stats,OrbitControls } from "@react-three/drei"
+import { Stats,OrbitControls, Loader } from "@react-three/drei"
 import Camera from "./components/Camera"
 import { BaseRoom } from "./components/BaseRoom"
 import Light from "./components/Light"
@@ -11,6 +11,7 @@ import { MeScreens } from './components/MeScreens';
 import { Arcade } from './components/Arcade';
 import { PcScreen } from './components/PcScreen';
 import { InteractableMesh } from './components/InteractableMesh';
+import LoadingScreen from './components/LoadingScreen';
 
 
 const Experience = () => {
@@ -24,7 +25,7 @@ const Experience = () => {
         toneMappingExposure: 1.0,
       }}
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={<LoadingScreen/>}>
       
       <Camera/>
       <Light/>
@@ -47,10 +48,11 @@ const Experience = () => {
          zoomSpeed={0.3}
         
       />
-
+      
       </Suspense>
-
+      
     </Canvas>
+    
   )
 }
 

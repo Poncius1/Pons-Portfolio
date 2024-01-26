@@ -1,4 +1,4 @@
-
+/* style.css */
 
 html,
 body,
@@ -9,8 +9,9 @@ main,
   margin: 0;
   padding: 0;
 }
+
 .canvas-container {
-  background: #080808; /* Canvas Color */
+  background: #080808; /* Color del Canvas */
 }
 
 .arcade-screen {
@@ -19,6 +20,7 @@ main,
   height: 470px;
   overflow-y: auto;
 }
+
 .pc-screen {
   background-color: #00ff6a;
   width: 680px;
@@ -40,13 +42,101 @@ main,
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 10px; 
+  margin-left: 10px;
   cursor: pointer;
 }
 
 .button img {
   width: 50px; /* Ancho de las imágenes (ajusta según tus necesidades) */
   height: auto; /* Altura ajustable para mantener la proporción */
-  opacity: 0.4
+  opacity: 0.4;
 }
 
+/* LoadingScreen.css */
+
+.spinner-loader,
+.text-loader {
+  margin-top: 10px; /* Espacio entre los loaders */
+}
+
+.text-loader {
+  font-weight: bold;
+  font-family: monospace;
+  display: inline-grid;
+  font-size: 30px;
+  color: white;
+}
+
+.text-loader:before,
+.text-loader:after {
+  content: "Loading Room...";
+  grid-area: 1/1;
+  mask-size: 100% 5px, 100% 100%;
+  -webkit-mask-size: 100% 5px, 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: l35-1 1s infinite;
+}
+
+
+.text-loader:before {
+  mask-image: linear-gradient(#dfd6d6 0 0), linear-gradient(#e2dcdc 0 0);
+  -webkit-mask-image: linear-gradient(#dfd6d6 0 0), linear-gradient(#e2dcdc 0 0);
+}
+
+.text-loader:after {
+  mask-image: linear-gradient(#f7f5f5 0 0);
+  -webkit-mask-image: linear-gradient(#f7f5f5 0 0);
+  animation: l35-1 1s infinite, l35-2 0.2s infinite cubic-bezier(0.5, 200, 0.5, -200);
+}
+
+@keyframes l35-1 {
+  0% {
+    -webkit-mask-position: 0 20px, 0 0;
+  }
+  20% {
+    -webkit-mask-position: 0 8px, 0 0;
+  }
+  40% {
+    -webkit-mask-position: 0 100%, 0 0;
+  }
+  60% {
+    -webkit-mask-position: 0 3px, 0 0;
+  }
+  80% {
+    -webkit-mask-position: 0 15px, 0 0;
+  }
+  100% {
+    -webkit-mask-position: 0 0, 0 0;
+  }
+}
+
+@keyframes l35-2 {
+  100% {
+    transform: translate(0.1px);
+  }
+}
+
+.spinner-loader {
+  width: 100px;
+  --b: 12px;
+  aspect-ratio: 1;
+  border-radius: 60%;
+  background: #0d8999;
+  -webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg),
+    radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: l5 1s infinite;
+  /* Agregar efecto de color neon y glow */
+  box-shadow: 0 0 10px 5px #0d8999, 0 0 20px 10px #0d8999, 0 0 30px 15px #0d8999,
+    0 0 40px 20px rgba(13, 137, 153, 0.7);
+  filter: brightness(270%);
+}
+
+@keyframes l5 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
