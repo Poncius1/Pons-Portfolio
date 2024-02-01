@@ -3,7 +3,7 @@ import { Html, useProgress } from '@react-three/drei';
 
 const LoadingScreen = () => {
   const { progress } = useProgress();
-  const roundedProgress = Math.floor(Math.min(progress, 1) * 100);
+  const roundedProgress = Math.round(Math.min(progress, 100));
 
   return (
     <Html center>
