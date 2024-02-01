@@ -8,6 +8,7 @@ const LoadingScreen = () => {
     <Html center>
       <div className="spinner-loader"></div>
       <div className="text-loader">
+      {Math.floor(progress * 100)}%
       </div>
     </Html>
   );
