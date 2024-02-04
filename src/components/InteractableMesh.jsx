@@ -7,6 +7,7 @@ import * as THREE from 'three';
 import { useGLTF, useTexture} from "@react-three/drei";
 import {useThree} from "@react-three/fiber";
 import gsap from "gsap/all";
+import Annotation from "./Annotation";
 
 export function InteractableMesh(props) {
   const { nodes, materials } = useGLTF("/models/AssetsRoom.gltf");
@@ -82,12 +83,20 @@ export function InteractableMesh(props) {
   return (
     <group {...props} dispose={null}>
       
-      <mesh onClick={Arcade}
-        castShadow
-        receiveShadow
-        geometry={nodes.Arcade.geometry}
-        material={materials.Arcade}
-      />
+      <mesh
+       castShadow
+       receiveShadow
+       geometry={nodes.Arcade.geometry}
+       material={materials.Arcade}
+      >
+        <Annotation 
+        position={[65, 120,-60]}
+        onClick={Arcade}>
+         <span style={{ fontSize: '1.5em' }}>🎮</span>
+        </Annotation>
+      </mesh>
+       
+      
       
       <mesh onClick={Pecera}
         castShadow

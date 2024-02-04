@@ -25,7 +25,6 @@ const Experience = () => {
       }}
     >
       <Suspense fallback={<LoadingScreen/>}>
-      
       <Camera/>
       <Light/>
       <BaseRoom/>
