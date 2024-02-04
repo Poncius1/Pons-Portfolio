@@ -76,18 +76,3 @@ main,
   box-shadow: inset 250px 0 0 0 #eee8e8;
   color: #09d420;
 }
-
-/* Estilos adicionales para hacerlo responsivo */
-@media only screen and (max-width: 600px) {
-  .annotation {
-    font-size: 12px; /* Ajusta el tamaño para pantallas más pequeñas */
-    padding: 6px 12px; /* Ajusta el padding para pantallas más pequeñas */
-  }
-}
-
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .annotation {
-    font-size: 12px; /* Puedes ajustar el tamaño según tus preferencias */
-    padding: 6px 12px; /* Puedes ajustar el padding según tus preferencias */
-  }
-}
