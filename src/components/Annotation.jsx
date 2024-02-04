@@ -10,10 +10,9 @@ function Annotation({ children, onClick, ...props }) {
   };
 
   return (
-    <Html
+    <Html 
       {...props}
       transform
-      occlude="blending"
       geometry>
       <div className="annotation" onClick={handleClick}>
         {children}

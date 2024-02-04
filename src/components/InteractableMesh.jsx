@@ -98,18 +98,27 @@ export function InteractableMesh(props) {
        
       
       
-      <mesh onClick={Pecera}
+      <mesh 
         castShadow
         receiveShadow
         geometry={nodes.Cristal_Pecera_G.geometry}
         material={glassMaterial}
       />
-      <mesh onClick={PUD}
-        castShadow
-        receiveShadow
-        geometry={nodes.Cristal_Pud.geometry}
-        material={glassMaterial}
-      />
+      <mesh
+      castShadow
+      receiveShadow
+      geometry={nodes.Cristal_Pud.geometry}
+      material={glassMaterial}
+      >
+        <Annotation 
+        position={[30, 100,30]}
+        rotation ={[0,.5,0]}
+        onClick={PUD}>
+         <span style={{ fontSize: '1.5em' }}>👨🏾</span>
+        </Annotation>
+      </mesh>
+        
+      
       
     </group>
   ); 
