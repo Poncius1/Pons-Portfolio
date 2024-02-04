@@ -61,7 +61,7 @@ main,
   border: none;
   font-size: 100px; /* Tamaño original: 8px, modificado para mayor visibilidad */
   font-weight: 300;
-  background: #3a3939;
+  background: #f7f1f1;
   color: white;
   padding: 80px 160px; /* Ajustado para mayor tamaño y mejor aspecto */
   border-radius: 200px;
@@ -73,7 +73,7 @@ main,
 }
 
 .annotation:hover {
-  box-shadow: inset 250px 0 0 0 #e7260c;
+  box-shadow: inset 250px 0 0 0 #7791e6;
   color: #09d420;
 }
 

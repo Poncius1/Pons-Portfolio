@@ -90,7 +90,7 @@ export function InteractableMesh(props) {
        material={materials.Arcade}
       >
         <Annotation 
-        position={[65, 120,-60]}
+        position={[65, 120,-55]}
         onClick={Arcade}>
          <span style={{ fontSize: '1.5em' }}>🎮</span>
         </Annotation>
