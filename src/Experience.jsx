@@ -12,7 +12,7 @@ import { Arcade } from './components/Arcade';
 import { PcScreen } from './components/PcScreen';
 import { InteractableMesh } from './components/InteractableMesh';
 import LoadingScreen from './components/LoadingScreen';
-
+import { Interactables } from './components/Interactables';
 const Experience = () => {
   
   return (
@@ -30,6 +30,7 @@ const Experience = () => {
       <BaseRoom/>
       <AssetsRoom/>
       <InteractableMesh/>
+      <Interactables/>
       <Arcade/>
       <MeScreens/>
       <PcScreen/>

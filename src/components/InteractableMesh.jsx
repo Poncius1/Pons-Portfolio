@@ -8,6 +8,10 @@ import { useGLTF, useTexture} from "@react-three/drei";
 import {useThree} from "@react-three/fiber";
 import gsap from "gsap/all";
 import Annotation from "./Annotation";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+
 
 export function InteractableMesh(props) {
   const { nodes, materials } = useGLTF("/models/AssetsRoom.gltf");
@@ -89,11 +93,12 @@ export function InteractableMesh(props) {
        geometry={nodes.Arcade.geometry}
        material={materials.Arcade}
       >
-        <Annotation 
+        {/*<Annotation 
         position={[65, 120,-55]}
         onClick={Arcade}>
          <span style={{ fontSize: '1.5em' }}>🎮</span>
-        </Annotation>
+        </Annotation> */}
+        
       </mesh>
        
       
@@ -114,7 +119,7 @@ export function InteractableMesh(props) {
         position={[30, 100,30]}
         rotation ={[0,.5,0]}
         onClick={PUD}>
-         <span style={{ fontSize: '1.5em' }}>👨🏾</span>
+         <FontAwesomeIcon icon={faCoffee}/>
         </Annotation>
       </mesh>
         

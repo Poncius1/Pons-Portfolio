@@ -54,17 +54,17 @@ main,
 
 /* Annotation Style*/
 .annotation {
-  transition: all 0.5s ease-in-out;
-  box-shadow: inset 0 0 0 0.09px rgb(18, 19, 29);
+  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   outline: none;
   border: none;
-  font-size: 100px; /* Tamaño original: 8px, modificado para mayor visibilidad */
+  font-size: 100px;
   font-weight: 300;
-  background: #f7f1f1;
-  color: white;
-  padding: 80px 160px; /* Ajustado para mayor tamaño y mejor aspecto */
-  border-radius: 200px;
+  background: #757575;
+  color: #0e0d0d;
+  padding: 80px 160px;
+  border-radius: 50px;
   letter-spacing: 1px;
   display: flex;
   justify-content: center;
@@ -73,7 +73,6 @@ main,
 }
 
 .annotation:hover {
-  box-shadow: inset 250px 0 0 0 #7791e6;
-  color: #09d420;
+  transform: scale(1.5); /* Se agranda solo en hover */
 }
 
