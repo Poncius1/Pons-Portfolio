@@ -9,7 +9,7 @@ import gsap from "gsap/all";
 import HolographicMaterial from "./HolographicMaterial";
 
 export function Interactables(props) {
-  const { nodes, materials } = useGLTF("/models/ps5.gltf");
+  const { nodes, materials } = useGLTF("/models/Interactables.gltf");
 
   const {camera} = useThree();
   const controls = useThree((state) => state.controls)
@@ -32,27 +32,61 @@ export function Interactables(props) {
         });
         
     }
+
+    const PUD = () =>{
+        controls.enabled = false
+            timeline.to(camera.rotation,{
+                x: Math.PI *  -0.0393,
+                y: 0,
+                z: 0,
+    
+            })
+            timeline.to(camera.position,{
+                x: 5.40,
+                y: 73.43,
+                z: 173.09,
+            });
+        }
+    
     const ps5ref = useRef();
+    const userRef = useRef();
 
     useFrame((state,delta)=> {
         ps5ref.current.rotation.y += 0.005
-       
+        userRef.current.rotation.z += 0.005
 
 
     });
 
+  
   return (
     <group {...props} dispose={null}>
       <mesh ref={ps5ref}
-      castShadow
-      receiveShadow
-      onClick={Arcade}
-      geometry={nodes.Controller.geometry}
-      material={materials.Material}
-      position={[63.45, 120.123, -53.995]}
+       onClick={Arcade}
+       castShadow
+       receiveShadow
+       geometry={nodes.Controller.geometry}
+       material={materials.Material}
+       position={[63.45, 123.123, -53.995]}
+
       >
-        <HolographicMaterial
+         <HolographicMaterial
         fresnelAmount ={0.18}/>
+      </mesh>
+       
+      
+      <mesh ref={userRef}
+      onClick={PUD}
+        castShadow
+        receiveShadow
+        geometry={nodes.AboutMe.geometry}
+        material={materials.None}
+        position={[27.885, 83.878, 27.993]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={6}
+        >
+            <HolographicMaterial
+            fresnelAmount ={0.18}/>
       </mesh>
         
       
@@ -60,4 +94,4 @@ export function Interactables(props) {
   );
 }
 
-useGLTF.preload("/models/ps5.gltf");
+useGLTF.preload("/models/Interactables.gltf");

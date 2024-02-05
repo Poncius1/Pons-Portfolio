@@ -115,12 +115,7 @@ export function InteractableMesh(props) {
       geometry={nodes.Cristal_Pud.geometry}
       material={glassMaterial}
       >
-        <Annotation 
-        position={[30, 100,30]}
-        rotation ={[0,.5,0]}
-        onClick={PUD}>
-         <FontAwesomeIcon icon={faCoffee}/>
-        </Annotation>
+        
       </mesh>
         
       
