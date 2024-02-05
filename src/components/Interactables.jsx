@@ -17,6 +17,8 @@ export function Interactables(props) {
    console.log(camera.position) 
    console.log(camera.rotation)    
    //controls.enabled = true
+
+
   const Arcade = () =>{
         controls.enabled = false
         timeline.to(camera.rotation,{
@@ -47,12 +49,29 @@ export function Interactables(props) {
                 z: 173.09,
             });
         }
+
+        const PC = () =>{
+          controls.enabled = false
+            timeline.to(camera.rotation,{
+              x: Math.PI *  -0.1233,
+              y: Math.PI * 0.4940,
+              z: Math.PI * 0.1233
+
+          })
+              timeline.to(camera.position,{
+                  x: -46.78,
+                  y: 104.85,
+                  z: -44.068,
+              });
+          }
     
     const ps5ref = useRef();
     const userRef = useRef();
+    const webRef = useRef();
 
     useFrame((state,delta)=> {
         ps5ref.current.rotation.y += 0.005
+        webRef.current.rotation.y += 0.005
         userRef.current.rotation.z += 0.005
 
 
@@ -61,22 +80,44 @@ export function Interactables(props) {
   
   return (
     <group {...props} dispose={null}>
-      <mesh ref={ps5ref}
-       onClick={Arcade}
-       castShadow
-       receiveShadow
-       geometry={nodes.Controller.geometry}
-       material={materials.Material}
-       position={[63.45, 123.123, -53.995]}
-
-      >
-         <HolographicMaterial
-        fresnelAmount ={0.18}/>
-      </mesh>
-       
       
-      <mesh ref={userRef}
-      onClick={PUD}
+      <mesh  ref={ps5ref}
+        onClick={PUD}
+        castShadow
+        receiveShadow
+        geometry={nodes.Controller.geometry}
+        material={materials.Material}
+        position={[63.45, 123.123, -53.995]}
+        scale={0.823}
+      >
+        <HolographicMaterial
+            fresnelAmount ={0.18}
+            signalSpeed={2}
+            enableBlinking ={false}
+            />
+
+      </mesh>
+      <mesh
+        ref={webRef}
+        onClick={PC}
+        castShadow
+        receiveShadow
+        geometry={nodes.Layer_001.geometry}
+        material={nodes.Layer_001.material}
+        position={[-61.198, 126.818, -44.388]}
+        rotation={[0, Math.PI / 2, 0]}
+        scale={6.374}
+      >
+        <HolographicMaterial
+            fresnelAmount ={0.18}
+            enableBlinking ={false}
+            signalSpeed={2}
+            hologramColor={'#4aa338'}/>
+
+
+      </mesh>
+      <mesh  ref={userRef}
+        onClick={PUD}
         castShadow
         receiveShadow
         geometry={nodes.AboutMe.geometry}
@@ -84,11 +125,13 @@ export function Interactables(props) {
         position={[27.885, 83.878, 27.993]}
         rotation={[-Math.PI / 2, 0, 0]}
         scale={6}
-        >
-            <HolographicMaterial
-            fresnelAmount ={0.18}/>
+      >
+        <HolographicMaterial
+            fresnelAmount ={0.18}
+            signalSpeed={2}
+            enableBlinking ={false}/>
+
       </mesh>
-        
       
     </group>
   );

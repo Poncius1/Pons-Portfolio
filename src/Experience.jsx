@@ -10,7 +10,6 @@ import './style.css'
 import { MeScreens } from './components/MeScreens';
 import { Arcade } from './components/Arcade';
 import { PcScreen } from './components/PcScreen';
-import { InteractableMesh } from './components/InteractableMesh';
 import LoadingScreen from './components/LoadingScreen';
 import { Interactables } from './components/Interactables';
 const Experience = () => {
@@ -29,7 +28,6 @@ const Experience = () => {
       <Light/>
       <BaseRoom/>
       <AssetsRoom/>
-      <InteractableMesh/>
       <Interactables/>
       <Arcade/>
       <MeScreens/>

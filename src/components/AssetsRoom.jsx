@@ -633,6 +633,32 @@ export function AssetsRoom(props) {
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.01}
       />
+
+<mesh
+       castShadow
+       receiveShadow
+       geometry={nodes.Arcade.geometry}
+       material={materials.Arcade}
+      >
+      </mesh>
+       
+      
+      
+      <mesh 
+        castShadow
+        receiveShadow
+        geometry={nodes.Cristal_Pecera_G.geometry}
+        material={glassMaterial}
+      />
+      <mesh
+      castShadow
+      receiveShadow
+      geometry={nodes.Cristal_Pud.geometry}
+      material={glassMaterial}
+      >
+      </mesh>
+
+
     </group>
   );
 }
