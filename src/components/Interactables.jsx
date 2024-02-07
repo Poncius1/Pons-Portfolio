@@ -91,9 +91,11 @@ export function Interactables(props) {
         scale={0.823}
       >
         <HolographicMaterial
-            fresnelAmount ={0.18}
+            fresnelAmount ={.18}
+            hologramOpacity={1}
             signalSpeed={2}
             enableBlinking ={false}
+            hologramColor={'#aaaaaa'}
             />
 
       </mesh>
@@ -112,7 +114,7 @@ export function Interactables(props) {
             fresnelAmount ={0.18}
             enableBlinking ={false}
             signalSpeed={2}
-            hologramColor={'#4aa338'}/>
+            hologramColor={'#aaaaaa'}/>
 
 
       </mesh>
@@ -129,7 +131,8 @@ export function Interactables(props) {
         <HolographicMaterial
             fresnelAmount ={0.18}
             signalSpeed={2}
-            enableBlinking ={false}/>
+            enableBlinking ={false}
+            hologramColor={'#aaaaaa'}/>
 
       </mesh>
       
