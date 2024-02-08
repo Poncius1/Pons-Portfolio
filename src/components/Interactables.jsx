@@ -13,25 +13,36 @@ export function Interactables(props) {
 
   const {camera} = useThree();
   const controls = useThree((state) => state.controls)
-  const timeline = gsap.timeline();
+  const timeline = gsap.timeline({
+    defaults:{
+      ease:"power2.out",
+      duration: 5
+    },
+  });
    console.log(camera.position) 
    console.log(camera.rotation)    
    //controls.enabled = true
 
 
   const Arcade = () =>{
-        controls.enabled = false
+        controls.enablePan = false
+        controls.enableRotate = false
+        timeline.to(controls.target,{
+          x:62.5,
+          y:96,
+          z:-61.12
+        })
         timeline.to(camera.rotation,{
             x: Math.PI *  -0.043961,
             y: 0,
             z: 0
 
-        })
+        },">-5")
         timeline.to(camera.position,{
             x: 64,
             y: 100,
             z: -37,
-        });
+        },">-5");
         
     }
 
@@ -51,18 +62,24 @@ export function Interactables(props) {
         }
 
         const PC = () =>{
-          controls.enabled = false
+            controls.enablePan = false
+            controls.enableRotate = false
+            timeline.to(controls.target,{
+              x:-72.12,
+              y:103.79,
+              z:-44.5
+            })
             timeline.to(camera.rotation,{
               x: Math.PI *  -0.1233,
               y: Math.PI * 0.4940,
               z: Math.PI * 0.1233
 
-          })
+          },">-5")
               timeline.to(camera.position,{
                   x: -46.78,
                   y: 104.85,
                   z: -44.068,
-              });
+              },">-5");
           }
     
     const ps5ref = useRef();
@@ -82,7 +99,7 @@ export function Interactables(props) {
     <group {...props} dispose={null}>
       
       <mesh  ref={ps5ref}
-        onClick={PUD}
+        onClick={Arcade}
         castShadow
         receiveShadow
         geometry={nodes.Controller.geometry}
