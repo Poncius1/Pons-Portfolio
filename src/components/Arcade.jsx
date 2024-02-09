@@ -17,7 +17,7 @@ export function Arcade(props) {
   const timeline = gsap.timeline({
     defaults:{
       ease:"circ.out",
-      duration: 5
+      duration: 8
     },
   });
 
@@ -26,19 +26,20 @@ export function Arcade(props) {
   const BackButton = () =>{
     controls.enablePan = true
     controls.enableRotate = true
-    timeline.to(controls.target,{
-      x:0,
-      y:0,
-      z:0
-    })
 
     timeline.to(camera.position,{
       x: 163, 
       y: 150,
       z: 157,
       
-    },">-5");
+    });
+      timeline.to(controls.target,{
+        x:0,
+        y:0,
+        z:0
+      },">-7")
     }
+    
 
 
   return (

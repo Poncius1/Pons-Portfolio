@@ -19,7 +19,7 @@ export function Interactables(props) {
       duration: 5
     },
   });
-   console.log(camera.position) 
+   console.log(camera.position)   
    console.log(camera.rotation)    
    //controls.enabled = true
 
@@ -47,18 +47,22 @@ export function Interactables(props) {
     }
 
     const PUD = () =>{
-        controls.enabled = false
+            timeline.to(controls.target,{
+              x:23.29,
+              y:35.43,
+              z:25.77,
+            })
             timeline.to(camera.rotation,{
                 x: Math.PI *  -0.0393,
                 y: 0,
                 z: 0,
     
-            })
+            },">-5")
             timeline.to(camera.position,{
                 x: 5.40,
                 y: 73.43,
                 z: 173.09,
-            });
+            },">-5");  
         }
 
         const PC = () =>{

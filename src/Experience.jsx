@@ -12,6 +12,7 @@ import { Arcade } from './components/Arcade';
 import { PcScreen } from './components/PcScreen';
 import LoadingScreen from './components/LoadingScreen';
 import { Interactables } from './components/Interactables';
+import AboutMe from './components/AboutMe';
 const Experience = () => {
   
   return (
@@ -32,6 +33,7 @@ const Experience = () => {
       <Arcade/>
       <MeScreens/>
       <PcScreen/>
+      <AboutMe/>
       <OrbitControls
          makeDefault
          enabled = {true}
