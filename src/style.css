@@ -27,6 +27,12 @@ main,
   height: 440px;
   overflow-y: auto;
 }
+.pud-screen {
+  background-color: #00ff6a;
+  width: 900px;
+  height: 1900px; 
+  overflow-y: auto;
+}
 
 .button-container {
   display: flex;

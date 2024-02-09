@@ -7,8 +7,8 @@ const AboutMe = () => {
 
   return (
     <Html
-    className="pc-screen"
-        position={[0,50,35]}
+    className="pud-screen"
+        position={[0,45,35]}
         rotation={[0,0,0]}
         transform
         occlude
