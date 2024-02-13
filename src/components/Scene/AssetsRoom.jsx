@@ -10,38 +10,21 @@ import { useGLTF, useTexture} from "@react-three/drei";
 export function AssetsRoom(props) {
   const { nodes, materials } = useGLTF("/models/AssetsRoom.gltf");
   
+  const createTexture = (path) => {
+    const texture = useTexture(path);
+    texture.flipY = false;
+    texture.encoding = THREE.sRGBEncoding;
+    return texture;
+  };
 
-  //PropsTexture
-  const propsTexture = useTexture("/texture/Props.png")
-  propsTexture.flipY = false;
-  propsTexture.encoding = THREE.sRGBEncoding
+  const propsTexture = createTexture("/texture/Props.png");
+  const pudTexture = createTexture("/texture/Pud.png");
+  const arcadeTexture = createTexture("/texture/Arcade.png");
+  const postersTexture = createTexture("/texture/Posters.png");
+  const plantsTexture = createTexture("/texture/Plants.png");
+  const buzzTexture = createTexture("/texture/Buzz.png");
 
-  //PudTexture
-  const pudTexture = useTexture("/texture/Pud.png")
-  pudTexture.flipY = false;
-  pudTexture.encoding = THREE.sRGBEncoding
-
-   //PudTexture
-   const arcadeTexture = useTexture("/texture/Arcade.png")
-   arcadeTexture.flipY = false;
-   arcadeTexture.encoding = THREE.sRGBEncoding
-   
-   //PostersTexture
-   const postersTexture = useTexture("/texture/Posters.png")
-   postersTexture.flipY = false;
-   postersTexture.encoding = THREE.sRGBEncoding
-
-   //PlantsTexture
-   const plantsTexture = useTexture("/texture/Plants.png")
-   plantsTexture.flipY = false;
-   plantsTexture.encoding = THREE.sRGBEncoding
-
-   //BuzzTexture
-   const buzzTexture = useTexture("/texture/Buzz.png")
-   buzzTexture.flipY = false;
-   buzzTexture.encoding = THREE.sRGBEncoding
-
-   const glassMaterial = new THREE.MeshPhysicalMaterial({
+  const glassMaterial = new THREE.MeshPhysicalMaterial({
     color: '#717482',
     transparent: true,
     opacity: 0.5,
@@ -50,10 +33,10 @@ export function AssetsRoom(props) {
     clearcoat: 1,
     ior: .25,
     clearcoatRoughness: 0.1,
-   })
+  })
 
 
-   //Change Materials 
+  //Change Materials 
   materials.Props.map = propsTexture
   materials.PUD.map = pudTexture
   materials.Arcade.map = arcadeTexture

@@ -58,28 +58,6 @@ main,
   opacity: 0.4;
 }
 
-/* Annotation Style*/
-.annotation {
-  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  outline: none;
-  border: none;
-  font-size: 100px;
-  font-weight: 300;
-  background: #f1ecec;
-  color: #0e0d0d;
-  padding: 80px 160px;
-  border-radius: 50px;
-  letter-spacing: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
 
-.annotation:hover {
-  transform: scale(1.5); /* Se agranda solo en hover */
-}
 
 

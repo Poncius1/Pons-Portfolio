@@ -2,7 +2,7 @@
 
 .spinner-loader,
 .text-loader {
-  margin-top: 10px; /* Espacio entre los loaders */
+  margin-top: 15px; /* Espacio entre los loaders */
 }
 
 .text-loader {

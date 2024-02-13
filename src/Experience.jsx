@@ -1,18 +1,14 @@
 import * as THREE from 'three';
 import { Suspense} from 'react';
 import { Canvas, } from "@react-three/fiber"
-import { Stats,OrbitControls, Loader } from "@react-three/drei"
-import Camera from "./components/Camera"
-import { BaseRoom } from "./components/BaseRoom"
-import Light from "./components/Light"
-import { AssetsRoom } from "./components/AssetsRoom" 
-import './style.css'
-import { MeScreens } from './components/MeScreens';
-import { Arcade } from './components/Arcade';
-import { PcScreen } from './components/PcScreen';
+import { Stats,OrbitControls } from "@react-three/drei"
 import LoadingScreen from './components/LoadingScreen';
+import Screens from './components/Screens';
 import { Interactables } from './components/Interactables';
-import AboutMe from './components/AboutMe';
+import Scene from './components/Scene';
+import './style.css'
+
+
 const Experience = () => {
   
   return (
@@ -25,15 +21,10 @@ const Experience = () => {
       }}
     >
       <Suspense fallback={<LoadingScreen/>}>
-      <Camera/>
-      <Light/>
-      <BaseRoom/>
-      <AssetsRoom/>
+      <Scene/>
+      <Screens/>
       <Interactables/>
-      <Arcade/>
-      <MeScreens/>
-      <PcScreen/>
-      <AboutMe/>
+      
       <OrbitControls
          makeDefault
          enabled = {true}
@@ -46,7 +37,7 @@ const Experience = () => {
          zoomSpeed={0.3}
         
       />
-      
+      <Stats/>
       </Suspense>
       
     </Canvas>

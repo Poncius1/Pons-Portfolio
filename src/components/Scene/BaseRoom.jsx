@@ -6,38 +6,30 @@ import React, { useRef } from "react";
 import * as THREE from 'three';
 import { useGLTF, useTexture} from "@react-three/drei";
 
+
 export function BaseRoom(props) {
   const { nodes, materials } = useGLTF("/models/BaseRoom.gltf");
   
-  //BaseTexture
-  const baseTexture = useTexture("/texture/BaseRoom.png")
-  baseTexture.flipY = false;
-  baseTexture.encoding = THREE.sRGBEncoding
-
-
-  //SecondFloor Texture
-  const secondFloorTexture = useTexture("/texture/SegundoPiso.png")
-  secondFloorTexture.flipY = false;
-  secondFloorTexture.encoding = THREE.sRGBEncoding
+  const createTexture = (path) => {
+    const texture = useTexture(path);
+    texture.flipY = false;
+    texture.encoding = THREE.sRGBEncoding;
+    return texture;
+  };
   
-
-  //Desktop Texture 
-  const desktopTexture = useTexture("/texture/Desktop.png")
-  desktopTexture.flipY = false;
-  desktopTexture.encoding = THREE.sRGBEncoding
-
-
-  //Terrarium Texture
-  const terrariumTexture = useTexture("/texture/Peceras.png")
-  terrariumTexture.flipY = false;
-  terrariumTexture.encoding = THREE.sRGBEncoding  
+  // Textures
+  const baseTexture = createTexture("/texture/BaseRoom.png");
+  const secondFloorTexture = createTexture("/texture/SegundoPiso.png");
+  const desktopTexture = createTexture("/texture/Desktop.png");
+  const terrariumTexture = createTexture("/texture/Peceras.png");
 
 
-    //Change Materials 
-    materials.CuartoBase.map = baseTexture
-    materials.Desktop.map = desktopTexture
-    materials.SegundoPiso.map = secondFloorTexture
-    materials.Pecera.map = terrariumTexture 
+  // Change Materials
+  materials.CuartoBase.map = baseTexture;
+  materials.Desktop.map = desktopTexture;
+  materials.SegundoPiso.map = secondFloorTexture;
+  materials.Pecera.map = terrariumTexture;
+  
   return (
     <group {...props} dispose={null}>
       <mesh
