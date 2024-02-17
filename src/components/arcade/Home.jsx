@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      <Link to="/gamelist">Go to GameList</Link>
+      <h1>Play Videogames</h1>
+      <Link to="/gamelist">Press Start To Play</Link>
     </div>
   );
 };

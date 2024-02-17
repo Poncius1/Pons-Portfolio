@@ -1,14 +1,9 @@
-// GameList.js
+
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import games from './games';
 
 const GameList = () => {
-  const games = [
-    { id: 1, title: 'Game 1' },
-    { id: 2, title: 'Game 2' },
-    { id: 3, title: 'Game 3' },
-  ];
-
   const navigate = useNavigate();
 
   const handleGoHome = () => {
@@ -17,7 +12,7 @@ const GameList = () => {
 
   return (
     <div>
-      <h2>Game List</h2>
+      <h2>MY GAMES</h2>
       <ul>
         {games.map(game => (
           <li key={game.id}>
