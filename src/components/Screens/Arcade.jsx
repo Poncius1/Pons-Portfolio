@@ -7,6 +7,7 @@ import React, { useRef } from "react";
 import { useGLTF,Html } from "@react-three/drei";
 import { useThree} from "@react-three/fiber";
 import gsap from "gsap/all";
+import ArcadePage from "../ArcadePage";
 
 export function Arcade(props) {
   const { nodes, materials } = useGLTF("/models/S_Arcade.gltf");
@@ -57,9 +58,7 @@ export function Arcade(props) {
             transform
             occlude
              >
-                <h1>
-                    Hola Mundo
-                </h1>
+              <ArcadePage/>
                 <button onClick={BackButton}>BACK</button>
             </Html>
           </mesh>
