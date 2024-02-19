@@ -19,8 +19,8 @@ export function Interactables(props) {
       duration: 5
     },
   });
-   console.log(camera.position)   
-   console.log(camera.rotation)    
+   console.log(camera.position)    
+   console.log(camera.rotation)     
    //controls.enabled = true
 
 

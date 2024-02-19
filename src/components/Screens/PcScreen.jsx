@@ -21,19 +21,19 @@ export function PcScreen(props) {
   });
 
 
-
+ 
   const BackButton = () =>{
     controls.enablePan = true
     controls.enableRotate = true
     timeline.to(controls.target,{
       x:0,
-      y:0,
+      y:50,
       z:0
     })
     timeline.to(camera.position,{
-      x: 163, 
-      y: 150,
-      z: 157,
+      x: 122, 
+      y: 76,
+      z: 124,
     
     },">-5");
   
