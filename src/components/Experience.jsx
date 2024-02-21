@@ -11,6 +11,7 @@ const Experience = () => {
   
   return (
     <Canvas className='canvas-container'
+     pixelRatio={[1, 2]}
 
       gl={{
         outputEncoding: THREE.sRGBEncoding,

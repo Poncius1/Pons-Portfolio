@@ -37,6 +37,8 @@
   border-radius: 15px;
   position: relative;
   top: 10px;
+  font-family: 'Signika Negative';
+  font-weight: 700;
 }
 
 /* Media query para dispositivos más pequeños */
