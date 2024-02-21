@@ -3,7 +3,7 @@ import React from "react";
 const StartSection = () => {
   const headerText = "Hi, I'm Angel Ponce";
   const smallText = "Software Developer from Mexico.";
-  const buttonText = "Start";
+  const buttonText = "Contact Me";
 
   const handleButtonClick = () => {
     alert("Button clicked!");

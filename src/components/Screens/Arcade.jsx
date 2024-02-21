@@ -25,7 +25,6 @@ export function Arcade(props) {
 
  
   const BackButton = () =>{
-    controls.enablePan = true
     controls.enableRotate = true
 
     timeline.to(camera.position,{

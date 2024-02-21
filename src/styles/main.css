@@ -11,7 +11,7 @@ main,
 }
 
 .canvas-container {
-  background: #070707; /* Color del Canvas */
+  background: #000000; /* Color del Canvas */
 }
 
 .arcade-screen {
@@ -28,7 +28,7 @@ main,
   overflow-y: auto;
 }
 .pud-screen {
-  background-color: #00ff6a;
+  background-color: #ffffff;
   width: 900px;
   height: 1900px; 
   overflow-y: auto;

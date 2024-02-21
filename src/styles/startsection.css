@@ -10,6 +10,7 @@
   width: 90%; /* Ajustado para ser más responsivo */
   font-family: 'Signika Negative';
   font-weight: 700;
+  
 }
 
 .header {
@@ -19,8 +20,9 @@
   background: #135c99;
   padding: 10px;
   border-radius: 8px;
+  box-shadow: 0 4px 8px #e2e0e050; 
 }
-
+ 
 .text {
   color: #f7f6f6;
   font-size: 1.2rem; /* Ajustado para ser más responsivo */
@@ -28,7 +30,7 @@
 
 .start-button {
   cursor: pointer;
-  background: #135c99;
+  background: #d8970c;
   color: #ffffff;
   border: none;
   padding: 10px 20px; /* Ajustado para ser más responsivo */
@@ -55,3 +57,4 @@
     padding: 6px 16px;
   }
 }
+
