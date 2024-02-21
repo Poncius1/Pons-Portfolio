@@ -1,4 +1,13 @@
-
+.main-container {
+  width: 100%;
+  height: 100%;
+  background-color: #000000; /* Color de fondo deseado */
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para apilar los elementos verticalmente */
+  justify-content: center;
+  align-items: center;
+  opacity: 100%;
+}
 
 .spinner-loader,
 .text-loader {
@@ -24,10 +33,7 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   animation: l35-1 1s infinite;
-  
 }
-
-
 
 .text-loader:before {
   mask-image: linear-gradient(#dfd6d6 0 0), linear-gradient(#e2dcdc 0 0);
@@ -73,25 +79,18 @@
   aspect-ratio: 1;
   border-radius: 60%;
   background: #0d8999;
-  mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg),
-        radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
-  -webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg),
-                radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+  mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg), radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+  -webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg), radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
   -webkit-mask-composite: destination-in;
   mask-composite: intersect;
   animation: l5 1s infinite;
   /* Agregar efecto de color neon y glow */
-  box-shadow: 0 0 10px 5px #0d8999, 0 0 20px 10px #0d8999, 0 0 30px 15px #0d8999,
-    0 0 40px 20px rgba(13, 137, 153, 0.7);
+  box-shadow: 0 0 10px 5px #0d8999, 0 0 20px 10px #0d8999, 0 0 30px 15px #0d8999, 0 0 40px 20px rgba(13, 137, 153, 0.7);
   filter: brightness(270%);
 }
-
 
 @keyframes l5 {
   to {
     transform: rotate(0.5turn);
   }
 }
-
-
-

@@ -1,0 +1,44 @@
+
+.container {
+    position: fixed;
+    top: 45%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+    width: 420px;
+    height: 220px;
+    font-family: 'Signika Negative';
+    font-weight: 700;
+    
+  }
+  
+  .header {
+    margin-bottom: 10px;
+    color: #eceaea;
+    font-size: 2.8rem;
+    background: #135c99;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .text {
+    color: #f7f6f6;
+    font-size: 1.3rem;
+    
+    
+  }
+  
+  .start-button {
+    cursor: pointer;
+    background: #eb250b;
+    color: #ffffff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 15px;
+    position: relative;
+    top: 10px;
+    
+  }
+  
