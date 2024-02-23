@@ -14,6 +14,7 @@ const Experience = () => {
 
   return (
     <Canvas className='canvas-container'
+
       gl={{
         outputEncoding: THREE.sRGBEncoding,
         toneMapping: THREE.ACESFilmicToneMapping,

@@ -8,6 +8,7 @@ import {useFrame, useThree} from "@react-three/fiber";
 import gsap from "gsap/all";
 import AboutMe from "./Screens/AboutMe";
 import HolographicMaterial from "./HolographicMaterial";
+import { DoubleSide } from "three";
 
 export function Interactables(props) {
   const { nodes, materials } = useGLTF("/models/Interactables.gltf");
@@ -154,7 +155,8 @@ export function Interactables(props) {
         <HolographicMaterial
             fresnelAmount ={0.18}
             signalSpeed={2}
-            enableBlinking ={false}
+            enableBlinking ={true}
+            side={DoubleSide}
             hologramColor={'#aaaaaa'}/>
 
       </mesh>
