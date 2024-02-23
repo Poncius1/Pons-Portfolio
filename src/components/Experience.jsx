@@ -1,5 +1,7 @@
+
+import React, { useRef } from 'react';
 import * as THREE from 'three';
-import { Canvas, } from "@react-three/fiber"
+import { Canvas, useThree, } from "@react-three/fiber"
 import { Stats,OrbitControls } from "@react-three/drei"
 import Screens from './Screens';
 import { Interactables } from './Interactables';
@@ -9,9 +11,9 @@ import Scene from './Scene';
 
 const Experience = () => {
   
+
   return (
     <Canvas className='canvas-container'
-
       gl={{
         outputEncoding: THREE.sRGBEncoding,
         toneMapping: THREE.ACESFilmicToneMapping,

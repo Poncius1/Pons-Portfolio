@@ -17,32 +17,94 @@
   margin-bottom: 10px;
   color: #eceaea;
   font-size: 2.5rem; /* Ajustado para ser más responsivo */
-  background: #135c99;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px #e2e0e050; 
+  text-shadow: 2px 4px 4px #316ddb80;
+  
+ 
 }
  
 .text {
-  color: #f7f6f6;
+  color: #d19a49;
   font-size: 1.2rem; /* Ajustado para ser más responsivo */
 }
 
-.start-button {
-  cursor: pointer;
-  background: #d8970c;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px; /* Ajustado para ser más responsivo */
-  border-radius: 15px;
-  position: relative;
+.cv-button {
+  font-family: 'Signika Negative';
+  font-weight: 700;
+  margin-right: 30px; /* Añadir separación entre botones */
+  padding: 0.6em 2em;
   top: 10px;
+  left: 20px;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
+
+.cv-button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-cv-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-cv-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.cv-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
 
 /* Media query para dispositivos más pequeños */
 @media (max-width: 600px) {
   .container {
-    width: 30%;
+    width: 100%; /* Cambiado para ocupar el ancho completo en dispositivos pequeños */
+    padding: 2%; /* Ajustar el padding para un mejor aspecto en dispositivos pequeños */
   }
 
   .header {
@@ -53,8 +115,11 @@
     font-size: 0.8rem;
   }
 
-  .start-button {
-    padding: 6px 16px;
+  .cv-button {
+    margin-right: 0; /* Eliminar la separación entre botones en dispositivos pequeños */
+    margin-bottom: 10px; /* Añadir separación vertical entre botones */
+    display: block; /* Asegurar que los botones se muestran en líneas separadas */
   }
 }
+
 

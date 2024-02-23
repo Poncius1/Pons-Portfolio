@@ -23,7 +23,6 @@ export function PcScreen(props) {
 
  
   const BackButton = () =>{
-    controls.enablePan = true
     controls.enableRotate = true
     timeline.to(controls.target,{
       x:0,

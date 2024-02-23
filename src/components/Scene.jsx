@@ -4,6 +4,8 @@ import { BaseRoom } from "./Scene/BaseRoom"
 import Light from "./Scene/Light"
 import { AssetsRoom } from "./Scene/AssetsRoom" 
 const Scene = () => {
+  
+
   return (
     <>
     <Camera />
