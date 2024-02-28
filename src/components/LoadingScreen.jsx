@@ -6,13 +6,12 @@ const LoadingScreen = ({ setStarted }) => {
 
   useEffect(() => {
     if (progress === 100) {
-      // Agrega un delay de 1000 milisegundos (1 segundo) antes de cambiar el estado
+  
       const delay = 3000;
       const timeoutId = setTimeout(() => {
         setStarted(true);
       }, delay);
 
-      // Limpia el timeout cuando el componente se desmonta
       return () => clearTimeout(timeoutId);
     }
   }, [progress, setStarted]);

@@ -9,7 +9,7 @@ import Scene from './Scene';
 
 
 
-const Experience = () => {
+const Experience = ({ setShowStartSection }) => {
   
 
   return (
@@ -22,8 +22,8 @@ const Experience = () => {
       }}
     >
         <Scene />
-        <Screens />
-        <Interactables />
+        <Screens setShowStartSection={setShowStartSection}/>
+        <Interactables setShowStartSection={setShowStartSection} />
 
         <OrbitControls
           makeDefault
@@ -38,6 +38,7 @@ const Experience = () => {
           zoomSpeed={0.3} />
         <Stats />
     </Canvas>
+  
   )
 }
 

@@ -7,18 +7,15 @@ import './styles/main.css';
 
 const App = () => {
   const [started, setStarted] = useState(false);
+  const [showStartSection, setShowStartSection] = useState(true);
 
   return (
     <>
-      {!started && <LoadingScreen setStarted={setStarted} />}
-      <Experience />
-      {started && (
-        <>
-          <StartSection />
-          <SocialButtons />
-        </>
-      )}
-    </>
+    {!started && <LoadingScreen setStarted={setStarted} />}
+    <Experience setShowStartSection={setShowStartSection} />
+    {started && showStartSection && <StartSection />}
+    {started && <SocialButtons />}
+  </>
   );
 };
 

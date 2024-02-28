@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useState } from "react";
 
 const StartSection = () => {
   const headerText = "Hi, I'm Angel Ponce";

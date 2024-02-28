@@ -103,6 +103,7 @@
   .container {
     width: 100%; /* Cambiado para ocupar el ancho completo en dispositivos pequeños */
     padding: 2%; /* Ajustar el padding para un mejor aspecto en dispositivos pequeños */
+    left: 10%;
   }
 
   .header {

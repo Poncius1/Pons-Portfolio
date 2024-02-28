@@ -10,7 +10,7 @@ import AboutMe from "./Screens/AboutMe";
 import HolographicMaterial from "./HolographicMaterial";
 import { DoubleSide } from "three";
 
-export function Interactables(props) {
+export function Interactables({ props,setShowStartSection }) {
   const { nodes, materials } = useGLTF("/models/Interactables.gltf");
 
   const {camera} = useThree();
@@ -26,9 +26,10 @@ export function Interactables(props) {
   //controls.enabled = true
   
   const [aboutMeVisible, setAboutMeVisible] = useState(false);
+  
 
   const Arcade = () =>{
-       
+    setShowStartSection(false);
         controls.enableRotate = false
         timeline.to(controls.target,{
           x:62.5,
@@ -51,6 +52,7 @@ export function Interactables(props) {
 
   const PUD = () =>{
     setAboutMeVisible(true);
+    setShowStartSection(false);
     timeline.to(controls.target,{
       x:23.29,
       y:35.43,
@@ -70,7 +72,8 @@ export function Interactables(props) {
   }
 
   const PC = () =>{
-            controls.enableRotate = false
+    setShowStartSection(false);
+    controls.enableRotate = false
             timeline.to(controls.target,{
               x:-72.12,
               y:103.79,

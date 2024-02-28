@@ -9,7 +9,7 @@ import { useThree} from "@react-three/fiber";
 import gsap from "gsap/all";
 import ArcadePage from "../ArcadePage";
 
-export function Arcade(props) {
+export function Arcade({ setShowStartSection,props}) {
   const { nodes, materials } = useGLTF("/models/S_Arcade.gltf");
 
 
@@ -25,6 +25,7 @@ export function Arcade(props) {
 
  
   const BackButton = () =>{
+    setShowStartSection(true);
     controls.enableRotate = true
 
     timeline.to(camera.position,{

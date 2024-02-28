@@ -3,7 +3,7 @@ import { PcScreen } from './Screens/PcScreen'
 import { MeScreens } from './Screens/MeScreens'
 import { Arcade } from './Screens/Arcade'
 
-const Screens = () => {
+const Screens = ({ setShowStartSection }) => {
 
   
 
@@ -11,7 +11,7 @@ const Screens = () => {
     <>
     <PcScreen />
     <MeScreens />
-    <Arcade />
+    <Arcade setShowStartSection={setShowStartSection} />
     </>
   )
 }
