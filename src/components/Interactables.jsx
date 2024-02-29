@@ -22,7 +22,7 @@ export function Interactables({ props,setShowStartSection }) {
     },
   });
   console.log(camera.position)    
-  console.log(camera.rotation)     
+  console.log(camera.rotation)      
   //controls.enabled = true
   
   const [aboutMeVisible, setAboutMeVisible] = useState(false);
@@ -53,9 +53,10 @@ export function Interactables({ props,setShowStartSection }) {
   const PUD = () =>{
     setAboutMeVisible(true);
     setShowStartSection(false);
+    controls.enableRotate = false
     timeline.to(controls.target,{
       x:23.29,
-      y:35.43,
+      y:50.43,
       z:25.77,
     })
     timeline.to(camera.rotation,{
@@ -65,9 +66,9 @@ export function Interactables({ props,setShowStartSection }) {
 
     },">-5")
     timeline.to(camera.position,{
-        x: 5.40,
-        y: 73.43,
-        z: 173.09,
+        x: 77.05,
+        y: 48.36,
+        z: 63.24,
     },">-5");  
   }
 

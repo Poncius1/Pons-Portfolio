@@ -18,7 +18,7 @@ export function Arcade({ setShowStartSection,props}) {
   const timeline = gsap.timeline({
     defaults:{
       ease:"circ.out",
-      duration: 8
+      duration: 5
     },
   });
 
@@ -38,7 +38,7 @@ export function Arcade({ setShowStartSection,props}) {
         x:0,
         y:50,
         z:0
-      },">-7")
+      },">-5")
     }
     
 

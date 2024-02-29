@@ -34,7 +34,7 @@ const Experience = ({ setShowStartSection }) => {
           minPolarAngle={Math.PI / 10}
           maxPolarAngle={Math.PI - Math.PI / 2}
           enableZoom={true}
-          enablePan={false} 
+          enablePan={true} 
           zoomSpeed={0.3} />
         <Stats />
     </Canvas>

@@ -44,7 +44,7 @@ const AboutMe = ({ isVisible, setVisibility }) => {
       {isVisible && (
         <Html
           className="pud-screen"
-          position={[40, 55, 55]}
+          position={[40, 48, 37.5]}
           rotation={[0, 1, 0]}
           transform
           occlude

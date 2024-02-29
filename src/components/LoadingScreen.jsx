@@ -7,7 +7,7 @@ const LoadingScreen = ({ setStarted }) => {
   useEffect(() => {
     if (progress === 100) {
   
-      const delay = 3000;
+      const delay = 2000;
       const timeoutId = setTimeout(() => {
         setStarted(true);
       }, delay);
