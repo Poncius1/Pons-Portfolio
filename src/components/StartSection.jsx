@@ -4,11 +4,28 @@ const StartSection = () => {
   const headerText = "Hi, I'm Angel Ponce";
   const smallText = "Software Developer from Mexico.";
   const buttonText = "Contact Me";
-  const cvText = " Download CV";
+  const cvText = " Resume";
 
 
   const startButton = () => {
     alert("Button clicked!");
+  };
+
+  const downloadCV = () => {
+
+    const pdfPath = "./Angel_Ponce_Resume.pdf";
+    
+    // Create 'a' element 
+    const link = document.createElement("a");
+    link.href = pdfPath;
+    link.download = "AngelPonce_Resume.pdf"; //Name Resume
+
+    //Simulate Click 
+    document.body.appendChild(link);
+    link.click();
+
+    // Delete element 'a' from DOM
+    document.body.removeChild(link);
   };
 
   return (
@@ -18,7 +35,7 @@ const StartSection = () => {
       <button className="cv-button" onClick={startButton}>
         {buttonText}
       </button>
-      <button className="cv-button" onClick={startButton}>
+      <button className="cv-button" onClick={downloadCV}>
         {cvText}
       </button>
     </div>
