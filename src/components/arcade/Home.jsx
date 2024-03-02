@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div>
-      <h1>Play Videogames</h1>
-      <Link to="/gamelist">Press Start To Play</Link>
+      <Link to="/gamelist">
+        <div>
+          <img src="./texture/Arcade.png" alt="Imagen" />
+          
+        </div>
+      </Link>
     </div>
   );
 };
