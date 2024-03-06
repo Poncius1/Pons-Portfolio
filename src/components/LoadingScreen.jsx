@@ -7,23 +7,18 @@ const LoadingScreen = ({ setStarted }) => {
 
   useEffect(() => {
     if (progress === 100) {
-      setFadeout(true);
       const delay = 2000;
 
-      // Agrega la clase para iniciar la animación de desvanecimiento
-
-      // Espera un tiempo antes de cambiar el estado `started`
       const timeoutId = setTimeout(() => {
         setStarted(true);
       }, delay);
 
-      // Limpia el temporizador al desmontar el componente
       return () => clearTimeout(timeoutId);
     }
   }, [progress, setStarted]);
 
   return (
-    <div className={`main-container ${fadeout ? 'fadeout' : ''}`}>
+    <div className={`main-container ${progress === 100 ? 'fadeout' : ''}`}>
       <div className="spinner-loader"></div>
       <div className="text-loader"></div>
     </div>

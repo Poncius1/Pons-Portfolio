@@ -16,7 +16,7 @@
   position: fixed;
   top: 45%;
   left: 20px; /* Ajusta el valor según el espacio que desees en el borde izquierdo */
-  transform: translate(0, -50%);
+  transform: translate(0, -65%);
 }
 
 .section-header {
