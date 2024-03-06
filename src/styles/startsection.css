@@ -117,6 +117,9 @@
 @media only screen and (max-width: 600px) {
   .start-section {
     padding: 10px; /* Ajusta el espacio interno para dispositivos móviles */
+    left: 50%; /* Coloca el contenedor en el centro horizontal */
+    transform: translateX(-50%) translateY(50%); /* Centra vertical y horizontalmente */
+    text-align: center; /* Centra el texto */
   }
 
   .section-header {
@@ -129,13 +132,13 @@
 
   .start-button-container {
     flex-direction: column; /* Muestra los botones en columna para dispositivos móviles */
-    align-items: flex-start; /* Alinea los botones a la izquierda */
+    align-items: center; /* Alinea los botones al centro */
   }
 
   .action-button {
     margin-right: 0; /* Elimina el margen derecho para botones en dispositivos móviles */
     margin-bottom: 20px; /* Añade espacio entre los botones en dispositivos móviles */
-    padding: 0.9em 1.5em;
+    padding: 0.9em 2em;
     font-size: 10px; /* Tamaño más pequeño para los textos de los botones en dispositivos móviles */
   }
 }

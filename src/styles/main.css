@@ -54,7 +54,7 @@ main,
 }
 
 .button img {
-  width: 50px; /* Ancho de las imágenes (ajusta según tus necesidades) */
+  width: 28px; /* Ancho de las imágenes (ajusta según tus necesidades) */
   height: auto; /* Altura ajustable para mantener la proporción */
   opacity: 0.4;
 }
