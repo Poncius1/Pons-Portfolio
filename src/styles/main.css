@@ -54,9 +54,18 @@ main,
 }
 
 .button img {
-  width: 28px; /* Ancho de las imágenes (ajusta según tus necesidades) */
+  width: 50px; /* Ancho de las imágenes (ajusta según tus necesidades) */
   height: auto; /* Altura ajustable para mantener la proporción */
   opacity: 0.4;
+}
+@media only screen and (max-width: 600px) {
+
+  .button img {
+    width: 35px; /* Ancho de las imágenes (ajusta según tus necesidades) */
+    height: auto; /* Altura ajustable para mantener la proporción */
+    opacity: 0.4;
+  }
+
 }
 
 
