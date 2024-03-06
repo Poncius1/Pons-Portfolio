@@ -118,16 +118,16 @@
   .start-section {
     padding: 10px; /* Ajusta el espacio interno para dispositivos móviles */
     left: 50%; /* Coloca el contenedor en el centro horizontal */
-    transform: translateX(-50%) translateY(80%); /* Centra vertical y horizontalmente */
+    transform: translateX(-50%) translateY(50%); /* Centra vertical y horizontalmente */
     text-align: center; /* Centra el texto */
   }
 
   .section-header {
-    font-size: 20px; /* Tamaño más pequeño para el encabezado en dispositivos móviles */
+    font-size: 18px; /* Tamaño más pequeño para el encabezado en dispositivos móviles */
   }
 
   .section-subtitle {
-    font-size: 18px; /* Tamaño más pequeño para el subtítulo en dispositivos móviles */
+    font-size: 16px; /* Tamaño más pequeño para el subtítulo en dispositivos móviles */
   }
 
   .start-button-container {
