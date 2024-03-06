@@ -1,12 +1,9 @@
-import {React,useState } from "react";
+import {React} from "react";
+
+
 
 const StartSection = () => {
-  const headerText = "Hi, I'm Angel Ponce";
-  const smallText = "Software Developer from Mexico.";
-  const buttonText = "Contact Me";
-  const cvText = " Resume";
-
-
+ 
   const startButton = () => {
     alert("Button clicked!");
   };
@@ -29,15 +26,13 @@ const StartSection = () => {
   };
 
   return (
-    <div className="container">
-      <h2 className="header">{headerText}</h2>
-      <p className="text">{smallText}</p>
-      <button className="cv-button" onClick={startButton}>
-        {buttonText}
-      </button>
-      <button className="cv-button" onClick={downloadCV}>
-        {cvText}
-      </button>
+   <div className="start-section">
+      <h2 className="section-header">Hi, I&rsquo;m Angel Ponce</h2>
+      <p className="section-subtitle">Software Developer from Mexico</p>
+      <div className="start-button-container">
+        <button className="action-button" onClick={startButton}>Contact Me</button>
+        <button className="action-button" onClick={downloadCV}>Resume</button>
+      </div>
     </div>
   );
 };

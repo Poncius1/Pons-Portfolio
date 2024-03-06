@@ -4,6 +4,7 @@ import Experience from './components/Experience';
 import StartSection from './components/StartSection';
 import SocialButtons from './components/SocialButtons';
 import './styles/main.css';
+import './styles/startsection.css'
 
 const App = () => {
   const [started, setStarted] = useState(false);
