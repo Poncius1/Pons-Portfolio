@@ -7,7 +7,7 @@
   .contact-container {
     max-width: 400px;
     margin: 70px auto;
-    padding: 20px;
+    padding: 30px 80px;
     background: linear-gradient(
       90deg,
       rgba(9, 10, 14, 1) 3%,
@@ -16,7 +16,10 @@
     );
     border-radius: 15px;
     box-shadow: 0 0 20px #296ddb78;
-    position: relative;
+    position: fixed;
+    top: 30%; /* Ajustar según sea necesario */
+    left: 50%; /* Ajustar según sea necesario */
+    transform: translate(-50%, -50%);
     overflow: hidden;
     z-index: 1;
     font-family: "Signika Negative";
@@ -56,6 +59,8 @@
     background-image: linear-gradient(to right, #eff1f5, #3e3e42);
     -webkit-background-clip: text;
     background-clip: text;
+    font-family: "Signika Negative";
+    font-weight: 600;
   }
   
   input,
@@ -70,13 +75,15 @@
     background: linear-gradient(90deg, #202036 3%, #0c0f18 52%, #070425 100%);
     box-shadow: 1px 0 8px #4929aa9e;
   }
-  .button-container {
+  .contact-button-container {
     display: flex;
     gap: 40px; /* Ajusta el espacio entre los elementos según sea necesario */
     margin-top: 15px;
     justify-content: center;
   }
   .button-85 {
+    font-family: "Signika Negative";
+    font-weight: 600;
     padding: 0.6em 2em;
     border: none;
     outline: none;

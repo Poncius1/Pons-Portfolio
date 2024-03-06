@@ -1,12 +1,10 @@
-import {React} from "react";
+import {React,useState } from "react";
 
 
 
-const StartSection = () => {
- 
-  const startButton = () => {
-    alert("Button clicked!");
-  };
+
+const StartSection = ({ contactButton }) => {
+  
 
   const downloadCV = () => {
 
@@ -26,12 +24,16 @@ const StartSection = () => {
   };
 
   return (
-   <div className="start-section">
+    <div className="start-section">
       <h2 className="section-header">Hi, I&rsquo;m Angel Ponce</h2>
       <p className="section-subtitle">Software Developer from Mexico</p>
       <div className="start-button-container">
-        <button className="action-button" onClick={startButton}>Contact Me</button>
-        <button className="action-button" onClick={downloadCV}>Resume</button>
+        <button className="action-button" onClick={contactButton}>
+          Contact Me
+        </button>
+        <button className="action-button" onClick={downloadCV}>
+          Resume
+        </button>
       </div>
     </div>
   );

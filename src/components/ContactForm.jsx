@@ -1,11 +1,8 @@
-import React from "react";
+import React,{ useState } from "react";
 
 
-const ContactForm = () => {
-  const hideForm = () => {
-    // Aquí puedes agregar la lógica para ocultar el formulario
-    console.log("Formulario oculto");
-  };
+const ContactForm = ({ hideForm }) => {
+  
 
   const submitForm = () => {
     // Aquí puedes agregar la lógica para enviar el formulario
@@ -49,11 +46,11 @@ const ContactForm = () => {
           <label htmlFor="message">Message:</label>
           <textarea id="message" name="message"></textarea>
         </div>
-        <div className="button-container">
+        <div className="contact-button-container">
           <button
             type="button"
             className="button-85"
-            onClick={() => hideForm()}
+            onClick={hideForm}
           >
             Back
           </button>
