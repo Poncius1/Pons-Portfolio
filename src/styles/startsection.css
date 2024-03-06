@@ -30,11 +30,14 @@
 
 .section-subtitle {
   font-size: 26px;
-  font-weight: 600; 
+  font-weight: 700; 
   font-family: "Signika Negative"; 
-  color: var(--subtitle-color);
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 1px #f59e2d; /* Añadimos un text-shadow al texto del subtítulo */
+  color: transparent;
+  background-image: linear-gradient(to right, #2a76e7, #bd0a40);
+  -webkit-background-clip: text; 
+  background-clip: text;
+  margin-bottom: 30px;
+  
 }
 
 .start-button-container {
@@ -66,10 +69,6 @@
   background: linear-gradient(
     45deg,
     #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
     #002bff,
     #7a00ff,
     #ff00c8,

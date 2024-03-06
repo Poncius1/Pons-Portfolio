@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
     {!started && <LoadingScreen setStarted={setStarted} />}
-    <Experience setShowStartSection={setShowStartSection} />
+    {started && <Experience setShowStartSection={setShowStartSection} />}
     {started && showStartSection && <StartSection />}
     {started && <SocialButtons />}
   </>
