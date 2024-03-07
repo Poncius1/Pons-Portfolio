@@ -16,7 +16,7 @@ main,
 }
 
 .arcade-screen {
-  background-color: #00ff6a;
+  background-color: #000000;
   width: 595px;
   height: 470px;
   overflow-y: auto;

@@ -1,7 +1,7 @@
 
-import React, { useRef } from 'react';
+import React from 'react';
 import * as THREE from 'three';
-import { Canvas, useThree, } from "@react-three/fiber"
+import { Canvas} from "@react-three/fiber"
 import { Stats,OrbitControls } from "@react-three/drei"
 import Screens from './Screens';
 import { Interactables } from './Interactables';
