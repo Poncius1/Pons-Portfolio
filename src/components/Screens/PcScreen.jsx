@@ -6,6 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF,Html } from "@react-three/drei";
 import { useThree} from "@react-three/fiber";
 import gsap from "gsap/all";
+import DesktopPage from "../DesktopPage";
 
 export function PcScreen(props) {
   const { nodes, materials } = useGLTF("/models/PcScreen.gltf");
@@ -55,9 +56,7 @@ export function PcScreen(props) {
         transform
         occlude
       >
-          <h1>
-              Hola Mundo
-          </h1>
+        <DesktopPage/>
           <button onClick={BackButton}>BACK</button>
       </Html>
 

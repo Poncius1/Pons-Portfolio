@@ -18,7 +18,7 @@ const LoadingScreen = ({ setStarted }) => {
   }, [progress, setStarted]);
 
   return (
-    <div className={`main-container ${progress === 100 ? 'fadeout' : ''}`}>
+    <div className={`main-container`}>
       <div className="spinner-loader"></div>
       <div className="text-loader"></div>
     </div>

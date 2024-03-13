@@ -1,0 +1,50 @@
+.a-box {
+    display: inline-block;
+    width: 180px; /* Reducir el ancho de la tarjeta */
+    text-align: center;
+    margin: 40px; /* Agregar margen para separar las tarjetas */
+  }
+  
+  .img-container {
+    height: 150px; /* Reducir la altura de la imagen */
+    width: 150px; /* Reducir el ancho de la imagen */
+    overflow: hidden;
+    border-radius: 0px 0px 10px 10px; /* Ajustar el radio de borde */
+    display: inline-block;
+  }
+  
+  .img-container img {
+    transform: skew(0deg, -13deg);
+    height: 170px; /* Ajustar la altura de la imagen */
+    margin: -25px 0px 0px -50px; /* Ajustar el margen */
+  }
+  
+  .inner-skew {
+    display: inline-block;
+    border-radius: 10px; /* Ajustar el radio de borde */
+    overflow: hidden;
+    padding: 0px;
+    transform: skew(0deg, 13deg);
+    font-size: 0px;
+    margin: 20px 0px 0px 0px; /* Ajustar el margen */
+    background: #c8c2c2;
+    height: 170px; /* Ajustar la altura */
+    width: 150px; /* Ajustar el ancho */
+  }
+  
+  .text-container {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 70px 10px 10px 10px; /* Ajustar el relleno */
+    border-radius: 10px; /* Ajustar el radio de borde */
+    background: #fff;
+    margin: -70px 0px 0px 0px; /* Ajustar el margen */
+    line-height: 19px;
+    font-size: 14px;
+  }
+  
+  .text-container h3 {
+    margin: 10px 0px 5px 0px; /* Ajustar el margen */
+    color: #04bcff;
+    font-size: 16px; /* Ajustar el tamaño del texto */
+  }
+  

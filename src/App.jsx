@@ -7,6 +7,8 @@ import ContactForm from './components/ContactForm';
 import './styles/main.css';
 import './styles/startsection.css';
 import './styles/contactform.css';
+import "./styles/card.css";
+
 
 const App = () => {
   const [showStartSection, setShowStartSection] = useState(true);

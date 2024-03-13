@@ -22,13 +22,7 @@ main,
   overflow-y: auto;
 }
 
-.pc-screen {
-  background-color: #00ff6a;
-  width: 680px;
-  height: 440px;
-  overflow-y: auto;
-  z-index: -1;
-}
+
 .pud-screen {
   background-color: #ffffff;
   width: 900px;
