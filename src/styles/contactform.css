@@ -5,7 +5,8 @@
     --button-bg: #e49132;
   }
   .contact-container {
-    max-width: 400px;
+    max-width: 500px;
+    width: 400px;
     margin: 70px auto;
     padding: 30px 80px;
     background: linear-gradient(
