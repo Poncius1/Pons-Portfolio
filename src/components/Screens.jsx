@@ -9,7 +9,7 @@ const Screens = ({ setShowStartSection }) => {
 
   return (
     <>
-    <PcScreen />
+    <PcScreen setShowStartSection={setShowStartSection} />
     <MeScreens />
     <Arcade setShowStartSection={setShowStartSection} />
     </>

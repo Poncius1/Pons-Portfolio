@@ -8,7 +8,7 @@ import { useThree} from "@react-three/fiber";
 import gsap from "gsap/all";
 import DesktopPage from "../DesktopPage";
 
-export function PcScreen(props) {
+export function PcScreen({ setShowStartSection,props}) {
   const { nodes, materials } = useGLTF("/models/PcScreen.gltf");
   
   
@@ -24,6 +24,7 @@ export function PcScreen(props) {
 
  
   const BackButton = () =>{
+    setShowStartSection(true);
     controls.enableRotate = true
     timeline.to(controls.target,{
       x:0,
@@ -56,8 +57,7 @@ export function PcScreen(props) {
         transform
         occlude
       >
-        <DesktopPage/>
-          <button onClick={BackButton}>BACK</button>
+        <DesktopPage onBackButtonClick={BackButton} />
       </Html>
 
       </mesh>

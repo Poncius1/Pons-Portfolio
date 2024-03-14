@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ImageCard from "./ImageCard";
 
-const Desktop = () => {
+
+const Desktop = ({ onBackButtonClick }) => {
   const [selectedTab, setSelectedTab] = useState("one");
+  const navigate = useNavigate(); 
 
   const handleTabChange = (tabId) => {
     setSelectedTab(tabId);
   };
   const handleButtonClick = () => {
-    // Lógica para manejar el click del botón
-    console.log("Botón clickeado");
+    onBackButtonClick()
+    navigate("/");
+    
   };
 
   return (
