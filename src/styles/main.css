@@ -19,7 +19,7 @@ main,
   background-color: #000000;
   width: 595px;
   height: 470px;
-  overflow-y: auto;
+  overflow-y: none;
 }
 
 

@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-container">
       <Link to="/gamelist">
-        <div>
-          <img src="./texture/Arcade.png" alt="Imagen" />
-          
+        <div className="image-wrapper">
+          <img src="./texture/homebg.gif" alt="Gif" />
         </div>
       </Link>
     </div>

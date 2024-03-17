@@ -8,6 +8,8 @@ import './styles/main.css';
 import './styles/startsection.css';
 import './styles/contactform.css';
 import "./styles/card.css";
+import "./styles/arcade.css";
+
 
 
 const App = () => {
