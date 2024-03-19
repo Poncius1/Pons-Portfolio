@@ -1,13 +1,20 @@
-import React,{ useState } from "react";
-
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = ({ hideForm }) => {
-  
+  const form = useRef();
 
-  const submitForm = () => {
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log("Formulario enviado");
+  const submitForm = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_p9cv3bz', 'template_7ngvs4a', e.target, 'LrgdB8IyBdpo1MJjN')
+      .then((result) => {
+        alert('Email successfully sent', result.text);
+        form.current.reset();
+      }, (error) => {
+        console.error('Error while sending Email', error.text);
+      });
   };
+
   return (
     <div className="contact-container">
       <div className="wave">
@@ -33,18 +40,18 @@ const ContactForm = ({ hideForm }) => {
       </div>
       <h1 className="header">Let&apos;s Build Together</h1>
 
-      <form>
+      <form ref={form} onSubmit={submitForm}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" />
+          <input type="text" id="name" name="user_name" />
         </div>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" />
+          <input type="email" id="email" name="user_email" />
         </div>
         <div className="form-group">
           <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message"></textarea>
+          <textarea id="message" name="message" />
         </div>
         <div className="contact-button-container">
           <button
@@ -55,9 +62,9 @@ const ContactForm = ({ hideForm }) => {
             Back
           </button>
           <button
-            type="button"
-            className="button-85"
+            type="submit"
             onClick={() => submitForm()}
+            className="button-85"
           >
             Submit
           </button>
