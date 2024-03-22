@@ -11,7 +11,7 @@ const ContactForm = ({ hideForm }) => {
         alert('Email successfully sent', result.text);
         form.current.reset();
       }, (error) => {
-        console.error('Error while sending Email', error.text);
+        console.error('Error while sending Email', error.text); 
       });
   };
 
