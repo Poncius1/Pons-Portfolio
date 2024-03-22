@@ -10,11 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@react-spring/web": "^9.7.3",
-=======
     "@emailjs/browser": "^4.3.3",
->>>>>>> f5d130de8cf33bb38d334afdeca1b9323968704d
+    "@react-spring/web": "^9.7.3",
     "@react-three/drei": "^9.97.5",
     "@react-three/fiber": "^8.15.13",
     "@react-three/postprocessing": "^2.15.12",
