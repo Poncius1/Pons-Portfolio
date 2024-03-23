@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 
-const Card = ({ imagen,title, paragraph }) => {
+const Card = ({ imagen, title, paragraph, linkPlay, linkCode }) => {
   const [show, setShown] = useState(false);
 
   const props3 = useSpring({
@@ -12,7 +12,7 @@ const Card = ({ imagen,title, paragraph }) => {
 
   return (
     <animated.div
-      className="card" // Clase CSS para el contenedor principal del card
+      className="card" 
       style={props3}
       onMouseEnter={() => setShown(true)}
       onMouseLeave={() => setShown(false)}
@@ -22,9 +22,9 @@ const Card = ({ imagen,title, paragraph }) => {
       <p>
         {paragraph}
       </p>
-      <div className="btnn"> {/* Clase CSS para el contenedor de botones */}
-        <button className="btn">&lt;/&gt;</button>
-        <button className="btn">Play</button>
+      <div className="btnn"> 
+        {linkCode && <button className="btn" onClick={() => window.open(linkCode, "_blank")}>Code</button>}
+        {linkPlay && <button className="btn" onClick={() => window.open(linkPlay, "_blank")}>Play</button>}
       </div>
     </animated.div>
   );
