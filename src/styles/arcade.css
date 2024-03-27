@@ -6,7 +6,8 @@
 }
 
 .arcade-screen {
-  background-color: #080808;
+  background-image: url('/public/texture/bgArcade.png');
+  background-position: center;
   width: 595px;
   height: 470px;
   overflow-y: none;
@@ -21,6 +22,8 @@
   border-color: #FF5858;
   border-radius: 20px;
   transition: all 0.3s;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
 }
 
 .btn:hover {
@@ -43,7 +46,9 @@
   width: 595px;
   height: 470px;
   overflow-y: none;
-  font-family: sans-serif;
+  font-family: "Press Start 2P";
+  font-weight: 400;
+  font-size: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +67,6 @@
 }
 
 .games-container .card:hover {
-  transform: translateY(-1.5rem);
   border: #e6053df6 0.2em solid;
   border-radius: 2.5rem 0 2.5rem 0;
 }
@@ -94,4 +98,6 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  user-select: none;
+
 }

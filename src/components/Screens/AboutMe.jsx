@@ -49,8 +49,27 @@ const AboutMe = ({ isVisible, setVisibility }) => {
           transform
           occlude
         >
-          <h1>Hola Mundo</h1>
-          <button onClick={BackButton}>BACK</button>
+          <h2>Experience:</h2>
+          <ul>
+            <li>2019 - 2024: Ingenieria en Tecnologias Interactivas y Animacion Digital, en UVM Campús Toluca.</li>
+            <li>Agosto 2023 - Diciembre 2023: Practicas Profesionales en Macula Interactive en el juego: "Mexico,1921. A Deep Slumber."</li>
+          </ul>
+          <div className="container-with-border">
+
+            <h2>About Me:</h2>
+            <p>Hey there! I'm Angel Ponce, a lifelong gamer with a dream: to be part of the vibrant world of video game development. From console classics to cutting-edge web experiences, I've always been drawn to interactive adventures that spark the imagination.</p>
+            <p>As a software developer, I've translated my love for gaming into creating immersive experiences that captivate and delight. Whether it's crafting a compelling storyline or fine-tuning the user experience, I'm all about bringing ideas to life in ways that leave a lasting impression.</p>
+
+          </div>
+          
+          <h2>Skills:</h2>
+          <ul>
+            <li>C++</li>
+            <li>C#</li>
+            <li>JavaScript</li>
+            <li>HTML + CSS</li>
+          </ul>
+          <button className="button-scifi"onClick={BackButton}>BACK</button>
         </Html>
       )}
     </>

@@ -17,12 +17,27 @@ main,
 
 
 
-
+ 
 .pud-screen {
-  background-color: #ffffff;
+  background-image: url('/public/texture/bgPud.png');
+  background-position: center;
   width: 900px;
   height: 1900px; 
   overflow-y: auto;
+}
+.container-with-border {
+  position: absolute; /* Permite ajustar la posición del contenedor */
+  height: 20%;
+  top: 30%; /* Posición vertical inicial */
+  left: 5%; /* Posición horizontal inicial */
+  max-width: 70%; /* Ancho máximo del contenedor */
+  padding: 50px; /* Espacio interior del contenedor */
+  border-width: 20px; /* Ancho del borde */
+  border-style: solid; /* Estilo del borde */
+  border-image-source: url('/public/texture/Recuadro.png'); /* Ruta a la imagen del borde */
+  border-image-slice: 20; /* Tamaño de la imagen del borde */
+  color: aliceblue;
+  font-size: 1.5rem;
 }
 
 .button-container {
