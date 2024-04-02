@@ -48,9 +48,9 @@
 .action-button {
   flex: 1;
   margin-right: 25px;
-  padding: 0.8em 1.5em; /* Aplicado el padding según tu estilo */
-  font-weight: 500; /* Aplicado el peso de la fuente según tu estilo */
-  font-family: "Signika Negative"; /* Aplicada la familia de fuente según tu estilo */
+  padding: 0.8em 1.5em; 
+  font-weight: 500; 
+  font-family: "Signika Negative"; 
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
   border: none;
