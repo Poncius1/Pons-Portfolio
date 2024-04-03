@@ -14,8 +14,8 @@
   
   .pc-screen {
     background: url("/texture/bgScreen.png");
-    width: 680px;
-    height: 440px;
+    width: 820px;
+    height: 530px;
     overflow-y: none;
     z-index: -1;
   }
@@ -33,8 +33,8 @@
   
   .tab {
     cursor: pointer;
-    padding: 10px 20px;
-    margin: 0px 2px;
+    padding: 15px 30px;
+    margin: 2px 2px;
     background: var(--tab-background);
     display: inline-block;
     color: var(--tab-text-color);
@@ -47,8 +47,8 @@
     background: var( --background-color);
     box-shadow: 0 2rem 2rem var(--panel-box-shadow);
     width: 100%;
-    max-width: 600px;
-    height: 400px;
+    max-width: 700px;
+    height: 500%;
     overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
@@ -81,7 +81,7 @@
   }
   
   .divider {
-    width: 80%;
+    width: 90%;
     border: none;
     border-top: 1px solid var(--divider-color);
     margin: 10px auto;

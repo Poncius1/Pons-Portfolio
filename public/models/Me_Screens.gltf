@@ -24,19 +24,83 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "Pantalla_Centro"
+            "name" : "Pantalla_Arriba",
+            "rotation" : [
+                0.013352654874324799,
+                0.38911619782447815,
+                -0.031290799379348755,
+                0.9205602407455444
+            ],
+            "scale" : [
+                1.1332199573516846,
+                1.1332199573516846,
+                1.1332200765609741
+            ],
+            "translation" : [
+                -74.29450988769531,
+                119.8415756225586,
+                -41.873390197753906
+            ]
         },
         {
             "mesh" : 1,
-            "name" : "Pantalla_Izquierda"
+            "name" : "Pantalla_IzqArriba",
+            "rotation" : [
+                0.10056077688932419,
+                -0.21987342834472656,
+                -0.3795619010925293,
+                0.8930151462554932
+            ],
+            "scale" : [
+                0.4857972264289856,
+                0.2962200939655304,
+                0.8948166370391846
+            ],
+            "translation" : [
+                -68.6063232421875,
+                119.83616638183594,
+                -61.03050231933594
+            ]
         },
         {
             "mesh" : 2,
-            "name" : "Pantalla_Derecha"
+            "name" : "Pantalla_Izq",
+            "rotation" : [
+                0.012662445195019245,
+                0.48779866099357605,
+                -0.031571660190820694,
+                0.8722931742668152
+            ],
+            "scale" : [
+                1.1332199573516846,
+                1.1332200765609741,
+                1.1332200765609741
+            ],
+            "translation" : [
+                -73.60216522216797,
+                112.75010681152344,
+                -23.323640823364258
+            ]
         },
         {
             "mesh" : 3,
-            "name" : "Pantalla_Vertical"
+            "name" : "Pantalla_Derecha",
+            "rotation" : [
+                -0.015509115532040596,
+                -0.020707637071609497,
+                0.011442458257079124,
+                0.999599814414978
+            ],
+            "scale" : [
+                1.0207529067993164,
+                1.0207527875900269,
+                1.0207529067993164
+            ],
+            "translation" : [
+                -68.75020599365234,
+                106.57260131835938,
+                -63.20579147338867
+            ]
         }
     ],
     "materials" : [
@@ -57,7 +121,7 @@
     ],
     "meshes" : [
         {
-            "name" : "Mesh.371",
+            "name" : "Mesh.373",
             "primitives" : [
                 {
                     "attributes" : {
@@ -82,7 +146,7 @@
             ]
         },
         {
-            "name" : "Mesh.369",
+            "name" : "Mesh.372",
             "primitives" : [
                 {
                     "attributes" : {
@@ -100,20 +164,20 @@
                             }
                         }
                     },
-                    "indices" : 7,
+                    "indices" : 3,
                     "material" : 0,
                     "mode" : 4
                 }
             ]
         },
         {
-            "name" : "Mesh.373",
+            "name" : "Mesh.063",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 8,
-                        "TEXCOORD_0" : 9,
-                        "NORMAL" : 10
+                        "POSITION" : 7,
+                        "TEXCOORD_0" : 8,
+                        "NORMAL" : 9
                     },
                     "extensions" : {
                         "KHR_draco_mesh_compression" : {
@@ -125,20 +189,20 @@
                             }
                         }
                     },
-                    "indices" : 7,
+                    "indices" : 3,
                     "material" : 0,
                     "mode" : 4
                 }
             ]
         },
         {
-            "name" : "Mesh.370",
+            "name" : "Mesh.064",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 11,
-                        "TEXCOORD_0" : 12,
-                        "NORMAL" : 13
+                        "POSITION" : 10,
+                        "TEXCOORD_0" : 11,
+                        "NORMAL" : 12
                     },
                     "extensions" : {
                         "KHR_draco_mesh_compression" : {
@@ -150,7 +214,7 @@
                             }
                         }
                     },
-                    "indices" : 14,
+                    "indices" : 3,
                     "material" : 0,
                     "mode" : 4
                 }
@@ -160,46 +224,16 @@
     "accessors" : [
         {
             "componentType" : 5126,
-            "count" : 6,
-            "max" : [
-                -73.57810974121094,
-                117.84805297851562,
-                -38.76850128173828
-            ],
-            "min" : [
-                -74.35969543457031,
-                111.35917663574219,
-                -48.92296600341797
-            ],
-            "type" : "VEC3"
-        },
-        {
-            "componentType" : 5126,
-            "count" : 6,
-            "type" : "VEC2"
-        },
-        {
-            "componentType" : 5126,
-            "count" : 6,
-            "type" : "VEC3"
-        },
-        {
-            "componentType" : 5123,
-            "count" : 6,
-            "type" : "SCALAR"
-        },
-        {
-            "componentType" : 5126,
             "count" : 4,
             "max" : [
-                -73.64791107177734,
-                114.52493286132812,
-                -19.320201873779297
+                4.885814666748047,
+                4.211818695068359,
+                4.840781211853027
             ],
             "min" : [
-                -74.73100280761719,
-                107.29412841796875,
-                -30.680206298828125
+                -4.885814666748047,
+                -4.211818695068359,
+                -4.840790748596191
             ],
             "type" : "VEC3"
         },
@@ -222,14 +256,14 @@
             "componentType" : 5126,
             "count" : 4,
             "max" : [
-                -63.660369873046875,
-                110.70088958740234,
-                -58.447593688964844
+                7.296693801879883,
+                12.026336669921875,
+                8.833114624023438
             ],
             "min" : [
-                -73.43199920654297,
-                102.27725219726562,
-                -68.12916564941406
+                -7.296697616577148,
+                -12.388514518737793,
+                -8.833114624023438
             ],
             "type" : "VEC3"
         },
@@ -245,61 +279,81 @@
         },
         {
             "componentType" : 5126,
-            "count" : 6,
+            "count" : 4,
             "max" : [
-                -71.34123992919922,
-                132.62066650390625,
-                -26.658479690551758
+                4.885814666748047,
+                4.211818695068359,
+                4.840781211853027
             ],
             "min" : [
-                -73.62689208984375,
-                116.98567199707031,
-                -36.879478454589844
+                -4.885814666748047,
+                -4.211818695068359,
+                -4.840790748596191
             ],
             "type" : "VEC3"
         },
         {
             "componentType" : 5126,
-            "count" : 6,
+            "count" : 4,
             "type" : "VEC2"
         },
         {
             "componentType" : 5126,
-            "count" : 6,
+            "count" : 4,
             "type" : "VEC3"
         },
         {
-            "componentType" : 5123,
-            "count" : 6,
-            "type" : "SCALAR"
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                4.885814666748047,
+                4.211818695068359,
+                4.840781211853027
+            ],
+            "min" : [
+                -4.885814666748047,
+                -4.211818695068359,
+                -4.840790748596191
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 212,
+            "byteLength" : 206,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 199,
-            "byteOffset" : 212
+            "byteLength" : 206,
+            "byteOffset" : 208
         },
         {
             "buffer" : 0,
             "byteLength" : 206,
-            "byteOffset" : 412
+            "byteOffset" : 416
         },
         {
             "buffer" : 0,
             "byteLength" : 206,
-            "byteOffset" : 620
+            "byteOffset" : 624
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 828,
-            "uri" : "data:application/octet-stream;base64,RFJBQ08CAgEBAAAABgICAgAAAT//ASIBAQABAQAD/wABAAAAAQAAAQAJAwAAAgEDCQIAAQIBAQkDAAIDAQEBAA8DASAvASADAHCQ0E5qXAAgO7FxAwBoJzWuAEAAAAAA/z8AACq4lMLmt95CHrFDwrB4IkEOBQEBAA0DVRWtCg9VFQ+tCgTcvaiCxQBCUQAALQgCAAAAAQEgAAAAAP8PAABnd+Q7AMa1OjtKfz8MBgMBAAsnAUABAAH4H4D/AfgfgP8B+B+A//8DAAD/AQAA/wJmQApEUkFDTwICAQEAAAAEAgICAAABH/8BEf8BEf8BEQP/AAEAAAABAAABAAkDAAACAQMJAgABAgEBCQMAAgMBAQEADwMBEAEQKwEgAwDcjzTMoQsAzDCIbgAAAgAAAAD/PwAARnaVwpiW1kIQcfXBlMI1QQ4FAQEADRcBIBMBIAMAIIQ3gAc1oIIAcIICAAAAAQEgAAAAAP8PAABYd+Q7AKL/u7pogT8MBgMBAAsnAUABAAH4H4D/AfgfgP//AwAA/wEAAP8CREAKAERSQUNPAgIBAQAAAAQCAgIAAAEf/wER/wER/wERA/8AAQAAAAEAAAEACQMAAAIBAwkCAAECAQEJAwACAwEBAQAOAwEQIwEQAwEgAwDcjwEgNbIUAaAaD9dHAcBlAAAAAAD/PwAAL92SwvSNzEIiQojCmFgcQQ4FAQEADRsBEAEQCwEgAwBQkXGA+CMAKCAAHCACAAAAAQEgAAAAAP8PAAAY0IO7gDP9O3VygT8MBgMBAAsnAUABAAL4L4D/AvgvgP//AwAA/wEAAP8CREAKAABEUkFDTwICAQEAAAAGAgICAAABP/8BIgEBAAEBAAP/AAEAAAABAAABAAkDAAACAQMJAgABAgEBCQMAAgMBAQEADwNVFSutCgEgA0DkcbCVAQAA1EoCwBQLWykAoGIBAABgigUAAAAA/z8AAPhAk8Kq+OlCloQTwvAoekEOBQEBAA0DrQoPASATVRUDamNzwQqwZQsABGwCAgACAAAAAQEgAAAAAP8PAAAAAAAAAAAAAJOpgD8MBgMBAAIDAUABAFUF/wMAAP8BAAD/AmZACgAA"
+            "byteLength" : 832,
+            "uri" : "data:application/octet-stream;base64,RFJBQ08CAgEBAAAABAICAgAAAR//ARH/ARH/ARED/wABAAAAAQAAAQAJAwAAAgEDCQIAAQIBAQkDAAIDAQEBAA4DARAjARADASADANyPASA1shQBoBoP10cBwGUAAAAAAP8/AACYWJzAOMeGwMLnmsCYWBxBDgUBAQANGwEQARALASADAFCRcYD4IwAoIAAcIAIAAAABASAAAAAA/w8AABjQg7uAM/07dXKBPwwGAwEACycBQAEAAvgvgP8C+C+A//8DAAD/AQAA/wJEQAoAAERSQUNPAgIBAQAAAAQCAgIAAAEf/wER/wER/wERA/8AAQAAAAEAAAEACQMAAAIBAwkCAAECAQEJAwACAwEBAQAPIwEQDwEwAwAogn2ziAEA+M1fytiYZ/sQVQJNAAQAAAAAAP8/AACMfunAWzdGwXBUDcGeUcNBDgUBAQANBwEQARAfASADAFCRLV5hAOggAAACAAAAAQEgAAAAAP8PAAAAAIA6AACAOo6Rfz8MBgMBAAsnAUABAP4L4L8A/gvgvwD/AwAA/wEAAP8CREAKAABEUkFDTwICAQEAAAAEAgICAAABH/8BEf8BEf8BEQP/AAEAAAABAAABAAkDAAACAQMJAgABAgEBCQMAAgMBAQEADgMBECMBEAMBIAMA3I8BIDWyFAGgGg/XRwHAZQAAAAAA/z8AAJhYnMA4x4bAwueawJhYHEEOBQEBAA0bARABEAsBIAMAUJFxgPgjACggABwgAgAAAAEBIAAAAAD/DwAAGNCDu4Az/Tt1coE/DAYDAQALJwFAAQAC+C+A/wL4L4D//wMAAP8BAAD/AkRACgAARFJBQ08CAgEBAAAABAICAgAAAR//ARH/ARH/ARED/wABAAAAAQAAAQAJAwAAAgEDCQIAAQIBAQkDAAIDAQEBAA4DARAjARADASADANyPASA1shQBoBoP10cBwGUAAAAAAP8/AACYWJzAOMeGwMLnmsCYWBxBDgUBAQANGwEQARALASADAFCRcYD4IwAoIAAcIAIAAAABASAAAAAA/w8AABjQg7uAM/07dXKBPwwGAwEACycBQAEAAvgvgP8C+C+A//8DAAD/AQAA/wJEQAoAAA=="
         }
     ]
 }

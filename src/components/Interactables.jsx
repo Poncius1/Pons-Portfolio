@@ -18,7 +18,7 @@ export function Interactables({ props,setShowStartSection }) {
   const timeline = gsap.timeline({
     defaults:{
       ease:"power2.out",
-      duration: 5
+      duration: 3
     },
   });
   console.log(camera.position)    
@@ -41,12 +41,12 @@ export function Interactables({ props,setShowStartSection }) {
             y: 0,
             z: 0
 
-        },">-5")
+        },">-3")
         timeline.to(camera.position,{
             x: 64,
             y: 100,
             z: -37,
-        },">-5");
+        },">-3");
         
     }
 
@@ -64,12 +64,12 @@ export function Interactables({ props,setShowStartSection }) {
         y: 0,
         z: 0,
 
-    },">-5")
+    },">-3")
     timeline.to(camera.position,{
         x: 77.05,
         y: 48.36,
         z: 63.24,
-    },">-5");  
+    },">-3");  
   }
 
   const PC = () =>{
@@ -85,12 +85,12 @@ export function Interactables({ props,setShowStartSection }) {
               y: Math.PI * 0.4940,
               z: Math.PI * 0.1233
 
-          },">-5")
+          },">-3")
               timeline.to(camera.position,{
                   x: -46.78,
                   y: 104.85,
                   z: -44.068,
-              },">-5");
+              },">-3");
  }
     
     const ps5ref = useRef();

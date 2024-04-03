@@ -8,7 +8,6 @@ import { useGLTF,useVideoTexture } from "@react-three/drei";
 import sports from "/videos/Deportes.mp4";
 import me from "/videos/Me.mp4";
 import twitch from "/videos/Twitch.mp4"
-import music from "/videos/Dis_Spotify.mp4"
 
 
 
@@ -18,49 +17,67 @@ function VideoMaterial({ url }) {
   return <meshBasicMaterial side={THREE.DoubleSide} map={texture} toneMapped={false} />
 }
 
+
 export function MeScreens(props) {
-  const { nodes, materials } = useGLTF("/models/Me_Screens.gltf");
-
-  const twitchUrl = 'https://www.twitch.tv/poncius';
-
+  const { nodes, materials } = useGLTF('/models/Me_Screens.gltf')
   return (
     <group {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Pantalla_Centro.geometry}
-
+        geometry={nodes.Pantalla_Arriba.geometry}
+        material={materials.Screen}
+        position={[-74.295, 119.842, -41.873]}
+        rotation={[0.07, 0.797, -0.098]}
+        scale={1.133}
       >
         <VideoMaterial url={sports}/>
+
       </mesh>
-      
+
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Pantalla_Izquierda.geometry}
-        
+        geometry={nodes.Pantalla_IzqArriba.geometry}
+        material={materials.Screen}
+        position={[-68.606, 119.836, -61.031]}
+        rotation={[0.014, -0.488, -0.8]}
+        scale={[0.486, 0.296, 0.895]}
       >
         <VideoMaterial url={me}/>
+
       </mesh>
-      <mesh 
+
+
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Pantalla_Izq.geometry}
+        material={materials.Screen}
+        position={[-73.602, 112.75, -23.324]}
+        rotation={[0.101, 1.016, -0.128]}
+        scale={1.133}
+      > 
+      <VideoMaterial url={me}/>
+      
+      </mesh>
+
+
+      <mesh
         castShadow
         receiveShadow
         geometry={nodes.Pantalla_Derecha.geometry}
-      
+        material={materials.Screen}
+        position={[-68.75, 106.573, -63.206]}
+        rotation={[-0.031, -0.042, 0.022]}
+        scale={1.021}
       >
-        <VideoMaterial url={twitch}/>
+         <VideoMaterial url={twitch}/>
+
       </mesh>
-      
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Pantalla_Vertical.geometry}
-       
-      >
-        <VideoMaterial url={music}/>
-      </mesh>
+
     </group>
-  );
+  )
 }
 
-useGLTF.preload("/models/Me_Screens.gltf");
+useGLTF.preload('/models/Me_Screens.gltf')

@@ -17,7 +17,7 @@ export function PcScreen({ setShowStartSection,props}) {
   const timeline = gsap.timeline({
     defaults:{
       ease:"circ.out",
-      duration: 5
+      duration: 3
     },
   });
 
@@ -36,7 +36,7 @@ export function PcScreen({ setShowStartSection,props}) {
       y: 76,
       z: 124,
     
-    },">-5");
+    },">-3");
   
   }
 
@@ -52,7 +52,7 @@ export function PcScreen({ setShowStartSection,props}) {
       >  
       <Html 
        className="pc-screen"
-        position={[-74.5,103.5,-43.8]}
+        position={[-74.5,105,-43.2]}
         rotation={[0.,1.57,0]}
         transform
         occlude
