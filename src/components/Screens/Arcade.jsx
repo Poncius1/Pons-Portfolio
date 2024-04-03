@@ -24,7 +24,7 @@ export function Arcade({ setShowStartSection,props}) {
 
 
  
-  const BackButton = () =>{
+  const BackActions = () =>{
     setShowStartSection(true);
     controls.enableRotate = true
 
@@ -58,8 +58,7 @@ export function Arcade({ setShowStartSection,props}) {
             transform
             occlude
              >
-              <ArcadePage/>
-                <button onClick={BackButton}>BACK</button>
+              <ArcadePage onBackButtonActions={BackActions}/>
             </Html>
           </mesh>
       

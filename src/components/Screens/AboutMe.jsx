@@ -3,11 +3,9 @@ import { Html } from '@react-three/drei';
 import { useThree } from "@react-three/fiber";
 import gsap from "gsap/all";
 
-const AboutMe = ({ isVisible, setVisibility }) => {
+const AboutMe = ({ isVisible, setVisibility,setShowStartSection }) => {
   
-  const BackPud = () => {
-    setVisibility(!isVisible);
-  };
+ 
 
   const { camera } = useThree();
   const controls = useThree((state) => state.controls);
@@ -19,7 +17,8 @@ const AboutMe = ({ isVisible, setVisibility }) => {
   });
 
   const BackButton = () =>{
-    BackPud();
+    setVisibility(!isVisible);
+    setShowStartSection(true);
     controls.enableRotate = true;
 
     timeline.to(camera.position,{

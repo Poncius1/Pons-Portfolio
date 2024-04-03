@@ -5,10 +5,11 @@ import Carroussel from './Carroussel';
 import Card from './Card';
 
 
-const GameList = () => {
+const GameList = ({ onBackButtonActions }) => {
   const navigate = useNavigate();
 
-  const handleGoHome = () => {
+  const Back = () => {
+    onBackButtonActions();
     navigate('/');
   }
 
@@ -85,7 +86,11 @@ const GameList = () => {
         showArrows={false}
         
       />
-      
+       <button className="btn" onClick={Back} style={{ 
+        position: 'absolute', 
+        bottom: '25px', 
+        left: '42%' 
+        }}>BACK</button>
     </div>
      
     

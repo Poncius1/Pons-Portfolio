@@ -108,7 +108,7 @@ export function Interactables({ props,setShowStartSection }) {
   
   return (
     <group {...props} dispose={null}>
-      <AboutMe isVisible={aboutMeVisible} setVisibility={setAboutMeVisible} />
+      <AboutMe isVisible={aboutMeVisible} setVisibility={setAboutMeVisible} setShowStartSection={setShowStartSection} />
       <mesh  ref={ps5ref}
         onClick={Arcade}
         castShadow

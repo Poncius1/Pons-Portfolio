@@ -24,6 +24,7 @@
   transition: all 0.3s;
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
+  
 }
 
 .btn:hover {
@@ -56,8 +57,8 @@
 
 .games-container .card {
   background-color:  var(--card-color);
-  width: 15rem;
-  height: 18rem;
+  width: 16rem;
+  height: 19rem;
   padding: 0;
   border: #212121 0.2rem solid;
   border-radius: 1rem;
@@ -81,23 +82,32 @@
 
 .games-container .card h2 {
   color: #fff;
-  margin: 0;
+  font-size: 1.2rem; /* Ajusta el tamaño del título según sea necesario */
+  margin: 0; /* Elimina el margen exterior */
   margin-top: 1rem;
+  text-align: center; /* Centra el título */
   user-select: none;
 }
 
 .games-container .card p {
   color: #fff;
-  margin: 0;
+  font-size: .8rem; /* Ajusta el tamaño del párrafo según sea necesario */
+  margin: 0; /* Elimina el margen exterior */
   margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center; /* Centra el párrafo */
   user-select: none;
 }
 
-.games-container .card .btnn {
+.btnn {
+  position: absolute; /* Establecer posición absoluta */
+  bottom: 20px; /* Posición desde el borde inferior */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajustar centrado horizontal */
   display: flex;
-  align-items: center;
-  gap: 20px;
+  align-items: center; /* Centrar verticalmente */
+  gap: 25%;
   user-select: none;
 
 }
+

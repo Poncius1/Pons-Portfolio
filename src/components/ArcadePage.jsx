@@ -5,12 +5,12 @@ import Home from './arcade/Home';
 import GameList from './arcade/GameList';
 
 
-const ArcadePage = () => {
+const ArcadePage = ({onBackButtonActions}) => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/gamelist" element={<GameList />} />
+        <Route path="/gamelist" element={<GameList onBackButtonActions={onBackButtonActions} />} />
 
       </Routes>
     </Router>
