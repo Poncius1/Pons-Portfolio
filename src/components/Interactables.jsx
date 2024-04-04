@@ -8,7 +8,6 @@ import {useFrame, useThree} from "@react-three/fiber";
 import gsap from "gsap/all";
 import AboutMe from "./Screens/AboutMe";
 import HolographicMaterial from "./HolographicMaterial";
-import { DoubleSide } from "three";
 
 export function Interactables({ props,setShowStartSection }) {
   const { nodes, materials } = useGLTF("/models/Interactables.gltf");
@@ -66,9 +65,9 @@ export function Interactables({ props,setShowStartSection }) {
 
     },">-3")
     timeline.to(camera.position,{
-        x: 77.05,
-        y: 48.36,
-        z: 63.24,
+        x: 85.33,
+        y: 48.80,
+        z: 68.43,
     },">-3");  
   }
 
@@ -104,69 +103,74 @@ export function Interactables({ props,setShowStartSection }) {
 
 
     });
-
+    return (
+      <group {...props} dispose={null}>
+        <AboutMe isVisible={aboutMeVisible} setVisibility={setAboutMeVisible} setShowStartSection={setShowStartSection} />
+        <mesh
+          ref={ps5ref}
+          onClick={Arcade}
+          castShadow
+          receiveShadow
+          geometry={nodes.Controller.geometry}
+          material={materials.Material}
+          position={[63.45, 123.128, -53.997]}
+        >
+          <HolographicMaterial
+              fresnelAmount ={.18}
+              hologramOpacity={1}
+              signalSpeed={2}
+              enableBlinking ={false}
+              hologramColor={'#aaaaaa'}
+              />
   
-  return (
-    <group {...props} dispose={null}>
-      <AboutMe isVisible={aboutMeVisible} setVisibility={setAboutMeVisible} setShowStartSection={setShowStartSection} />
-      <mesh  ref={ps5ref}
-        onClick={Arcade}
-        castShadow
-        receiveShadow
-        geometry={nodes.Controller.geometry}
-        material={materials.Material}
-        position={[63.45, 123.123, -53.995]}
-        scale={0.823}
-      >
-        <HolographicMaterial
-            fresnelAmount ={.18}
-            hologramOpacity={1}
-            signalSpeed={2}
+        </mesh>
+  
+  
+  
+        <mesh
+          ref={webRef}
+          onClick={PC}
+          castShadow
+          receiveShadow
+          geometry={nodes.Portfolio.geometry}
+          material={materials.Material}
+          position={[-62.361, 129, -42.556]}
+        >
+          <HolographicMaterial
+            fresnelAmount ={0.18}
             enableBlinking ={false}
+            signalSpeed={2}
             hologramColor={'#aaaaaa'}
+          />
+        </mesh>
+  
+        <mesh
+          ref={userRef}
+          onClick={PUD}
+          castShadow
+          receiveShadow
+          geometry={nodes.AboutMe.geometry}
+          material={materials.Material}
+          position={[27.885, 83.878, 27.993]}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={6}
+        >
+           <HolographicMaterial
+              fresnelAmount ={.18}
+              hologramOpacity={1}
+              signalSpeed={2}
+              enableBlinking ={false}
+              hologramColor={'#aaaaaa'}
             />
-
-      </mesh>
-      <mesh
-        ref={webRef}
-        onClick={PC}
-        castShadow
-        receiveShadow
-        geometry={nodes.Layer_001.geometry}
-        material={nodes.Layer_001.material}
-        position={[-61.198, 126.818, -44.388]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={6.374}
-      >
-        <HolographicMaterial
-            fresnelAmount ={0.18}
-            enableBlinking ={false}
-            signalSpeed={2}
-            hologramColor={'#aaaaaa'}/>
-
-
-      </mesh>
-      <mesh  ref={userRef}
-        onClick={PUD}
-        castShadow
-        receiveShadow
-        geometry={nodes.AboutMe.geometry}
-        material={materials.None}
-        position={[27.885, 83.878, 27.993]}
-        rotation={[-Math.PI / 2, 0, 0]}
-        scale={6}
-      >
-        <HolographicMaterial
-            fresnelAmount ={0.18}
-            signalSpeed={2}
-            enableBlinking ={true}
-            side={DoubleSide}
-            hologramColor={'#aaaaaa'}/>
-
-      </mesh>
-      
-    </group>
-  );
+  
+        </mesh>
+      </group>
+    )
+   
 }
 
 useGLTF.preload("/models/Interactables.gltf");
+
+
+
+

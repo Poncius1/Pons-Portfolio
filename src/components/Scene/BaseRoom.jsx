@@ -327,6 +327,16 @@ export function BaseRoom(props) {
         scale={[1.235, 1.235, 1.894]}
       />
       <mesh
+        name="Lava"
+        castShadow
+        receiveShadow
+        geometry={nodes.Lava.geometry}
+        material={materials.Lava}
+        position={[-69.627, 94.844, -13.914]}
+        rotation={[Math.PI / 2, 0, -0.333]}
+        scale={[1.393, 1.279, 1.937]}
+      />
+      <mesh
         name="alacena"
         castShadow
         receiveShadow

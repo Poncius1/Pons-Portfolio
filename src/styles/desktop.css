@@ -87,6 +87,12 @@
     border-top: 1px solid var(--divider-color);
     margin: 10px auto;
   }
+  .credit-section{
+    font-size: 1em;
+    color: #000000;
+  }
+
+
   .back-button {
     position: absolute;
     bottom: 40px; /* Ajusta la distancia desde la parte inferior */
