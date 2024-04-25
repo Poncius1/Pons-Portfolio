@@ -66,7 +66,7 @@ const Desktop = ({ onBackButtonClick }) => {
           <div className="panel-title">Web Projects</div>
           <hr className="divider" />
           <ImageCard
-            imageUrl="https://images.unsplash.com/photo-1584791097929-aa825fe8e1e1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+            imageUrl="https://i.ibb.co/J7mn0Cf/Room.png"
             title="Portfolio 2024"
             description="Portfolio web create with React, CSS, and R3F."
             link="https://github.com/Poncius1/Pons-Portfolio"

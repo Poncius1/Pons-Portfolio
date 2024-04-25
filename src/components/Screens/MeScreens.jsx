@@ -7,7 +7,8 @@ import * as THREE from "three";
 import { useGLTF,useVideoTexture,useTexture } from "@react-three/drei";
 import sports from "/videos/Deportes.mp4";
 import me from "/videos/Me.mp4";
-import twitch from "/videos/Twitch.mp4"
+import hobby from "/videos/Hobby.mp4";
+import twitch from "/videos/Twitch.mp4" 
 
 
 
@@ -62,7 +63,7 @@ export function MeScreens(props) {
         rotation={[0.014, -0.488, -0.8]}
         scale={[0.486, 0.296, 0.895]}
       >
-        <VideoMaterial url={me}/>
+        <VideoMaterial url={hobby}/>
       </mesh>
 
 
@@ -81,6 +82,7 @@ export function MeScreens(props) {
 
 
       <mesh
+        onClick={() => window.open('https://www.twitch.tv/poncius', '_blank')}
         name="Pantalla_Derecha"
         castShadow
         receiveShadow
